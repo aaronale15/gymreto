@@ -40,13 +40,14 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
 .member-pts{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--accent);text-align:right;}
 .member-pts small{font-family:'Nunito',sans-serif;font-size:10px;color:var(--muted);display:block;}
 .week-nav{display:flex;align-items:center;justify-content:space-between;padding:0 16px;margin-bottom:12px;}
-.week-nav-btn{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:8px 16px;color:var(--text);font-size:18px;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;}
+.week-nav-btn{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:8px 16px;color:var(--text);font-size:16px;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;}
 .week-nav-btn:active{background:var(--border);}
-.week-label{font-weight:800;font-size:13px;color:var(--accent);text-align:center;}
+.week-nav-btn.disabled{opacity:.3;pointer-events:none;}
+.week-label{font-weight:800;font-size:12px;color:var(--accent);text-align:center;flex:1;margin:0 8px;}
 .week-header{display:flex;gap:6px;margin-bottom:6px;}
-.week-day-label{flex:1;text-align:center;font-size:10px;font-weight:800;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;}
+.week-day-label{flex:1;text-align:center;font-size:10px;font-weight:800;color:var(--muted);text-transform:uppercase;}
 .week-grid{display:flex;gap:6px;}
-.day-cell{flex:1;aspect-ratio:1;border-radius:10px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;transition:all .2s;}
+.day-cell{flex:1;aspect-ratio:1;border-radius:10px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;transition:all .2s;}
 .day-cell.done{background:rgba(240,255,68,.15);border-color:var(--accent);}
 .day-cell.future{opacity:.3;cursor:default;}
 .day-cell.today{border-color:var(--accent);box-shadow:0 0 0 2px rgba(240,255,68,.3);}
@@ -57,9 +58,12 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
 .stat-lbl{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;}
 .reto-card{background:linear-gradient(135deg,#1a2a1a,#1a1a2a);border:1px solid rgba(240,255,68,.2);border-radius:20px;padding:20px;margin:0 16px 14px;}
 .reto-badge{display:inline-block;background:var(--accent);color:#000;font-size:10px;font-weight:800;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:12px;}
-.reto-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1px;margin-bottom:4px;}
-.reto-pts{margin-top:14px;font-weight:800;font-size:14px;color:var(--accent);}
-.reto-type-badge{display:inline-block;background:rgba(255,107,53,.15);border:1px solid rgba(255,107,53,.3);color:#ff6b35;font-size:10px;font-weight:800;padding:3px 10px;border-radius:6px;margin-left:8px;}
+.reto-title{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;margin-bottom:4px;}
+.reto-pts{margin-top:10px;font-weight:800;font-size:14px;color:var(--accent);}
+.reto-daily-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-top:8px;}
+.reto-day-cell{aspect-ratio:1;border-radius:6px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;cursor:pointer;color:var(--muted);}
+.reto-day-cell.done{background:rgba(240,255,68,.15);border-color:var(--accent);color:var(--accent);}
+.reto-day-cell.future{opacity:.3;cursor:default;}
 .teams-vs{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin-bottom:10px;}
 .team-box{background:var(--surface2);border-radius:14px;padding:14px;text-align:center;}
 .team-name{font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;margin-bottom:8px;}
@@ -76,7 +80,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
 .form-select{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-family:'Nunito',sans-serif;font-size:15px;color:var(--text);outline:none;appearance:none;}
 .btn-primary{width:100%;background:var(--accent);color:#000;border:none;border-radius:14px;padding:16px;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;cursor:pointer;}
 .btn-secondary{width:100%;background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:14px;padding:14px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;cursor:pointer;margin-top:8px;}
-.btn-secondary:active{background:var(--border);}
+.btn-danger{width:100%;background:rgba(255,68,68,.1);color:var(--accent2);border:1px solid rgba(255,68,68,.3);border-radius:14px;padding:14px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;cursor:pointer;margin-top:8px;}
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:flex-end;justify-content:center;z-index:200;backdrop-filter:blur(4px);}
 .modal-overlay.open{display:flex;}
 .modal{background:var(--surface);border-radius:28px 28px 0 0;padding:24px 20px 48px;width:100%;max-width:430px;max-height:90vh;overflow-y:auto;}
@@ -112,22 +116,14 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
 .toast.show{opacity:1;}
 .toast.success{border-color:var(--accent3);color:var(--accent3);}
 .toast.error{border-color:var(--accent2);color:var(--accent2);}
-.date-range-bar{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:14px 18px;margin:0 16px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px;}
-.date-range-bar input{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:8px 10px;color:var(--text);font-family:'Nunito',sans-serif;font-size:13px;outline:none;flex:1;}
-.date-range-label{font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;white-space:nowrap;}
-.reto-daily-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:12px;}
-.reto-day-cell{aspect-ratio:1;border-radius:8px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;cursor:pointer;color:var(--muted);}
-.reto-day-cell.done{background:rgba(240,255,68,.15);border-color:var(--accent);color:var(--accent);}
-.reto-day-cell.future{opacity:.3;cursor:default;}
-.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);}
-.toggle-row:last-child{border-bottom:none;}
-.toggle-label{font-size:14px;font-weight:700;}
-.toggle-switch{position:relative;width:44px;height:24px;}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);}
+.toggle-switch{position:relative;width:44px;height:24px;flex-shrink:0;}
 .toggle-switch input{opacity:0;width:0;height:0;}
 .toggle-slider{position:absolute;cursor:pointer;inset:0;background:var(--surface2);border-radius:24px;transition:.3s;border:1px solid var(--border);}
 .toggle-slider:before{position:absolute;content:"";height:18px;width:18px;left:2px;bottom:2px;background:var(--muted);border-radius:50%;transition:.3s;}
 .toggle-switch input:checked + .toggle-slider{background:rgba(240,255,68,.2);border-color:var(--accent);}
 .toggle-switch input:checked + .toggle-slider:before{transform:translateX(20px);background:var(--accent);}
+.toggle-label{font-size:14px;font-weight:700;flex:1;margin-right:12px;}
 </style>
 </head>
 <body>
@@ -147,7 +143,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
   <div id="semana-content"></div>
 </div>
 <div class="page" id="page-retos">
-  <div class="page-header"><div class="page-title">RETOS <span>EXTRA</span></div><div class="page-sub">Semana actual</div></div>
+  <div class="page-header"><div class="page-title">RETOS <span>EXTRA</span></div><div class="page-sub">Navega semanas</div></div>
   <div class="group-selector" id="retos-groups"></div>
   <div id="retos-content"></div>
 </div>
@@ -168,8 +164,6 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
   <button class="nav-btn" onclick="showPage('caja',this)"><span class="ni">&#128176;</span>Caja</button>
   <button class="nav-btn" onclick="showPage('admin',this)"><span class="ni">&#9881;</span>Admin</button>
 </nav>
-
-<!-- MODALS -->
 
 <div class="modal-overlay" id="modal-group">
   <div class="modal">
@@ -197,14 +191,11 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
     <div class="modal-title">RETO EXTRA</div>
     <div class="form-group"><label class="form-label">Descripcion del reto</label><input class="form-input" id="new-reto-desc" placeholder="100 abdominales"></div>
     <div class="form-group"><label class="form-label">Puntos por vez completado</label><input class="form-input" id="new-reto-pts" type="number" value="3" min="1"></div>
-    <div class="toggle-row" style="padding:14px 0">
-      <span class="toggle-label">Reto diario (se marca cada dia)</span>
-      <label class="toggle-switch">
-        <input type="checkbox" id="reto-daily-toggle">
-        <span class="toggle-slider"></span>
-      </label>
+    <div class="toggle-row">
+      <span class="toggle-label">Reto diario (marcar cada dia)</span>
+      <label class="toggle-switch"><input type="checkbox" id="reto-daily-toggle"><span class="toggle-slider"></span></label>
     </div>
-    <button class="btn-primary" onclick="addReto()">ACTIVAR RETO</button>
+    <button class="btn-primary" style="margin-top:16px" onclick="addReto()">ACTIVAR RETO</button>
     <button class="btn-secondary" onclick="closeModal('modal-reto')">Cancelar</button>
   </div>
 </div>
@@ -231,390 +222,342 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
 </div>
 
 <script>
-var SURL = 'https://cxrtjirmjeylkpqovoen.supabase.co';
-var SKEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4cnRqaXJtamV5bGtwcW92b2VuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4MDk3NjMsImV4cCI6MjA4OTM4NTc2M30.-iRZ6y75a_DQXcBeMfj_yHfC0oYs2bexxhWFsY4fp30';
-var sb = supabase.createClient(SURL, SKEY);
-var groups = [];
-var currentGroupId = null;
-var DAYS = ['Lun','Mar','Mie','Jue','Vie','Sab','Dom'];
-var EMOJIS = ['💪','🔥','⚡','🦁','🏋️','🤸','🥊'];
+var SURL='https://cxrtjirmjeylkpqovoen.supabase.co';
+var SKEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4cnRqaXJtamV5bGtwcW92b2VuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4MDk3NjMsImV4cCI6MjA4OTM4NTc2M30.-iRZ6y75a_DQXcBeMfj_yHfC0oYs2bexxhWFsY4fp30';
+var sb=supabase.createClient(SURL,SKEY);
+var groups=[],currentGroupId=null;
+var DAYS=['Lun','Mar','Mie','Jue','Vie','Sab','Dom'];
+var EMOJIS=['💪','🔥','⚡','🦁','🏋️','🤸','🥊'];
+var weekOffsetSemana=0,weekOffsetRetos=0;
 
-// Week offset: 0 = current, -1 = last week, etc.
-var weekOffset = 0;
+function showLoading(t){document.getElementById('loading-text').textContent=t||'Cargando...';document.getElementById('loading-overlay').classList.add('show');}
+function hideLoading(){document.getElementById('loading-overlay').classList.remove('show');}
+function showToast(msg,type){var t=document.getElementById('toast');t.textContent=msg;t.className='toast show '+(type||'success');setTimeout(function(){t.classList.remove('show');},3000);}
+function openModal(id){document.getElementById(id).classList.add('open');}
+function closeModal(id){document.getElementById(id).classList.remove('open');}
+document.querySelectorAll('.modal-overlay').forEach(function(mo){mo.addEventListener('click',function(e){if(e.target===mo)mo.classList.remove('open');});});
 
-function showLoading(t) { document.getElementById('loading-text').textContent = t||'Cargando...'; document.getElementById('loading-overlay').classList.add('show'); }
-function hideLoading() { document.getElementById('loading-overlay').classList.remove('show'); }
-function showToast(msg, type) { var t=document.getElementById('toast'); t.textContent=msg; t.className='toast show '+(type||'success'); setTimeout(function(){ t.classList.remove('show'); },3000); }
-function openModal(id) { document.getElementById(id).classList.add('open'); }
-function closeModal(id) { document.getElementById(id).classList.remove('open'); }
-document.querySelectorAll('.modal-overlay').forEach(function(mo) { mo.addEventListener('click',function(e){ if(e.target===mo) mo.classList.remove('open'); }); });
-
-function getWeekDaysOffset(offset) {
-  var now = new Date();
-  var day = now.getDay() || 7;
-  var monday = new Date(now);
-  monday.setDate(now.getDate() - day + 1 + (offset * 7));
-  var result = [];
-  for (var i=0; i<7; i++) {
-    var d = new Date(monday);
-    d.setDate(monday.getDate() + i);
-    var key = d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-    result.push({ key:key, label:DAYS[i], date:d });
+function getWeekDays(offset){
+  var now=new Date(),day=now.getDay()||7,monday=new Date(now);
+  monday.setDate(now.getDate()-day+1+(offset*7));
+  var result=[];
+  for(var i=0;i<7;i++){
+    var d=new Date(monday);d.setDate(monday.getDate()+i);
+    var key=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+    result.push({key:key,label:DAYS[i],date:d});
   }
   return result;
 }
-function todayKey() { var n=new Date(); return n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0'); }
-function formatDate(key) { var p=key.split('-'); return p[2]+'/'+p[1]+'/'+p[0].slice(2); }
-function weekLabel(days) {
-  return formatDate(days[0].key) + ' - ' + formatDate(days[6].key);
-}
+function todayKey(){var n=new Date();return n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0');}
+function fmt(key){var p=key.split('-');return p[2]+'/'+p[1]+'/'+p[0].slice(2);}
+function weekLbl(days){return fmt(days[0].key)+' - '+fmt(days[6].key);}
 
-async function initDB() {
+async function initDB(){
   showLoading('Conectando...');
-  try {
-    var res = await sb.from('groups').select('*').order('created_at');
-    if (res.error) throw res.error;
-    groups = res.data || [];
-    if (groups.length && !currentGroupId) currentGroupId = groups[0].id;
-  } catch(e) { showToast('Error: '+e.message,'error'); }
-  hideLoading();
-  renderRanking();
+  try{var res=await sb.from('groups').select('*').order('created_at');if(res.error)throw res.error;groups=res.data||[];if(groups.length&&!currentGroupId)currentGroupId=groups[0].id;}
+  catch(e){showToast('Error: '+e.message,'error');}
+  hideLoading();renderRanking();
 }
 
-function showPage(name, btn) {
-  document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
-  document.querySelectorAll('.nav-btn').forEach(function(b){ b.classList.remove('active'); });
+function showPage(name,btn){
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active');});
   document.getElementById('page-'+name).classList.add('active');
   btn.classList.add('active');
-  weekOffset = 0;
-  if (name==='ranking') renderRanking();
-  else if (name==='semana') renderSemana();
-  else if (name==='retos') renderRetos();
-  else if (name==='caja') renderCaja();
-  else if (name==='admin') renderAdmin();
+  weekOffsetSemana=0;weekOffsetRetos=0;
+  if(name==='ranking')renderRanking();
+  else if(name==='semana')renderSemana();
+  else if(name==='retos')renderRetos();
+  else if(name==='caja')renderCaja();
+  else if(name==='admin')renderAdmin();
 }
 
-function renderGroupSelector(cid, pk) {
-  var c = document.getElementById(cid);
-  if (!groups.length) { c.innerHTML='<div style="padding:12px 20px;font-size:13px;color:var(--muted)">Crea un grupo en Admin</div>'; return; }
-  c.innerHTML = groups.map(function(g){ return '<div class="group-chip '+(currentGroupId===g.id?'active':'')+'" onclick="selGroup(\''+g.id+'\',\''+pk+'\')">'+g.name+'</div>'; }).join('');
+function renderGroupSelector(cid,pk){
+  var c=document.getElementById(cid);
+  if(!groups.length){c.innerHTML='<div style="padding:12px 20px;font-size:13px;color:var(--muted)">Crea un grupo en Admin</div>';return;}
+  c.innerHTML=groups.map(function(g){return '<div class="group-chip '+(currentGroupId===g.id?'active':'')+'" onclick="selGroup(\''+g.id+'\',\''+pk+'\')">'+g.name+'</div>';}).join('');
 }
-async function selGroup(gid, pk) { currentGroupId=gid; if(pk==='ranking')renderRanking(); else if(pk==='semana')renderSemana(); else if(pk==='retos')renderRetos(); else if(pk==='caja')renderCaja(); }
+async function selGroup(gid,pk){currentGroupId=gid;if(pk==='ranking')renderRanking();else if(pk==='semana')renderSemana();else if(pk==='retos')renderRetos();else if(pk==='caja')renderCaja();}
 
-// ===== RANKING WITH DATE RANGE =====
-async function renderRanking() {
+// ===== RANKING =====
+async function renderRanking(){
   renderGroupSelector('ranking-groups','ranking');
-  var c = document.getElementById('ranking-content');
-  if (!currentGroupId) { c.innerHTML='<div class="empty-state"><div class="big">👥</div>Sin grupo seleccionado</div>'; return; }
-
-  // Date range controls
-  var today = todayKey();
-  var storedStart = localStorage.getItem('range_start_'+currentGroupId) || '';
-  var storedEnd = localStorage.getItem('range_end_'+currentGroupId) || '';
-
-  c.innerHTML = '<div class="card" style="margin-bottom:10px">' +
-    '<div class="card-title">📊 Rango del ranking</div>' +
-    '<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">' +
-    '<div style="flex:1"><div class="form-label" style="margin-bottom:4px">Desde</div>' +
-    '<input type="date" class="form-input" id="range-start" value="'+storedStart+'" onchange="saveRange()" style="padding:10px 12px"></div>' +
-    '<div style="flex:1"><div class="form-label" style="margin-bottom:4px">Hasta</div>' +
-    '<input type="date" class="form-input" id="range-end" value="'+storedEnd+'" onchange="saveRange()" style="padding:10px 12px"></div>' +
-    '</div>' +
-    '<button class="btn-secondary" style="margin-top:10px" onclick="clearRange()">Ver todo el tiempo</button>' +
-    '</div>' +
+  var c=document.getElementById('ranking-content');
+  if(!currentGroupId){c.innerHTML='<div class="empty-state"><div class="big">👥</div>Sin grupo seleccionado</div>';return;}
+  var storedStart=localStorage.getItem('rs_'+currentGroupId)||'';
+  var storedEnd=localStorage.getItem('re_'+currentGroupId)||'';
+  c.innerHTML='<div class="card" style="margin-bottom:10px"><div class="card-title">📊 Rango del ranking</div>'+
+    '<div style="display:flex;gap:10px"><div style="flex:1"><div class="form-label" style="margin-bottom:4px">Desde</div>'+
+    '<input type="date" class="form-input" id="rs" value="'+storedStart+'" onchange="saveRange()" style="padding:10px 12px"></div>'+
+    '<div style="flex:1"><div class="form-label" style="margin-bottom:4px">Hasta</div>'+
+    '<input type="date" class="form-input" id="re" value="'+storedEnd+'" onchange="saveRange()" style="padding:10px 12px"></div></div>'+
+    '<button class="btn-secondary" style="margin-top:10px" onclick="clearRange()">Ver todo el tiempo</button></div>'+
     '<div id="ranking-table"></div>';
-
   await loadRankingTable();
 }
 
-function saveRange() {
-  var s = document.getElementById('range-start').value;
-  var e = document.getElementById('range-end').value;
-  localStorage.setItem('range_start_'+currentGroupId, s);
-  localStorage.setItem('range_end_'+currentGroupId, e);
+function saveRange(){
+  var s=document.getElementById('rs').value,e=document.getElementById('re').value;
+  localStorage.setItem('rs_'+currentGroupId,s);localStorage.setItem('re_'+currentGroupId,e);
+  loadRankingTable();
+}
+function clearRange(){
+  localStorage.removeItem('rs_'+currentGroupId);localStorage.removeItem('re_'+currentGroupId);
+  document.getElementById('rs').value='';document.getElementById('re').value='';
   loadRankingTable();
 }
 
-function clearRange() {
-  localStorage.removeItem('range_start_'+currentGroupId);
-  localStorage.removeItem('range_end_'+currentGroupId);
-  document.getElementById('range-start').value = '';
-  document.getElementById('range-end').value = '';
-  loadRankingTable();
-}
-
-async function loadRankingTable() {
-  var c = document.getElementById('ranking-table');
-  if (!c) return;
+async function loadRankingTable(){
+  var c=document.getElementById('ranking-table');if(!c)return;
   showLoading('Calculando...');
-  var startEl = document.getElementById('range-start');
-  var endEl = document.getElementById('range-end');
-  var rangeStart = startEl ? startEl.value : '';
-  var rangeEnd = endEl ? endEl.value : '';
-
-  var days = getWeekDaysOffset(0);
-  var r1 = await sb.from('members').select('*').eq('group_id',currentGroupId).order('created_at');
-  var attQuery = sb.from('attendance').select('*').eq('group_id',currentGroupId);
-  if (rangeStart) attQuery = attQuery.gte('day_key', rangeStart);
-  if (rangeEnd) attQuery = attQuery.lte('day_key', rangeEnd);
-  var r2 = await attQuery;
-  var raQuery = sb.from('reto_attendance').select('*,retos(points)').eq('group_id',currentGroupId);
-  var r3 = await raQuery;
-  var weekAttQuery = sb.from('attendance').select('*').eq('group_id',currentGroupId).in('day_key', days.map(function(d){return d.key;}));
-  var r4 = await weekAttQuery;
+  var rs=document.getElementById('rs'),re=document.getElementById('re');
+  var rangeStart=rs?rs.value:'',rangeEnd=re?re.value:'';
+  var days=getWeekDays(0);
+  var r1=await sb.from('members').select('*').eq('group_id',currentGroupId).order('created_at');
+  var aq=sb.from('attendance').select('*').eq('group_id',currentGroupId);
+  if(rangeStart)aq=aq.gte('day_key',rangeStart);
+  if(rangeEnd)aq=aq.lte('day_key',rangeEnd);
+  var r2=await aq;
+  // Get reto_attendance with points — only from active or past retos (not deleted points)
+  var raq=sb.from('reto_attendance').select('*,retos(points,active,description)').eq('group_id',currentGroupId);
+  var r3=await raq;
+  var r4=await sb.from('attendance').select('*').eq('group_id',currentGroupId).in('day_key',days.map(function(d){return d.key;}));
   hideLoading();
+  var members=r1.data||[],allAtt=r2.data||[],retoAtt=r3.data||[],weekAtt=r4.data||[];
 
-  var members = r1.data||[], allAtt = r2.data||[], retoAtt = r3.data||[], weekAtt = r4.data||[];
-  var mpts = members.map(function(m) {
-    var attPts = allAtt.filter(function(a){return a.member_id===m.id;}).length * 3;
-    var retoPts = retoAtt.filter(function(a){return a.member_id===m.id;}).reduce(function(sum,a){ return sum + (a.retos?a.retos.points:3); }, 0);
-    var wd = weekAtt.filter(function(a){return a.member_id===m.id;}).length;
-    return Object.assign({},m,{pts:attPts+retoPts, weekDays:wd});
+  // Only count reto_attendance where reto still exists (not deleted)
+  var validRetoAtt=retoAtt.filter(function(a){return a.retos!==null;});
+
+  var mpts=members.map(function(m){
+    var attPts=allAtt.filter(function(a){return a.member_id===m.id;}).length*3;
+    var retoPts=validRetoAtt.filter(function(a){return a.member_id===m.id;}).reduce(function(sum,a){return sum+(a.retos?a.retos.points:0);},0);
+    var wd=weekAtt.filter(function(a){return a.member_id===m.id;}).length;
+    return Object.assign({},m,{pts:attPts+retoPts,weekDays:wd});
   }).sort(function(a,b){return b.pts-a.pts;});
 
-  var sanctioned = mpts.filter(function(m){return m.weekDays<4;});
-  var alertHtml = '';
-  if (sanctioned.length) {
-    alertHtml = '<div class="alert-auto"><div class="alert-title">⚠️ Sanciones esta semana</div>'+
-      sanctioned.map(function(m){ var miss=4-m.weekDays; return '<div class="alert-item"><strong>'+m.name+'</strong><span>₡'+(miss*1000).toLocaleString()+'</span></div>'; }).join('') + '</div>';
+  var sanctioned=mpts.filter(function(m){return m.weekDays<4;});
+  var alertHtml='';
+  if(sanctioned.length){
+    alertHtml='<div class="alert-auto"><div class="alert-title">⚠️ Sanciones esta semana</div>'+
+      sanctioned.map(function(m){var miss=4-m.weekDays;return'<div class="alert-item"><strong>'+m.name+'</strong><span>₡'+(miss*1000).toLocaleString()+'</span></div>';}).join('')+'</div>';
   }
-
-  var rangeLabel = (rangeStart||rangeEnd) ? ('📅 '+( rangeStart?formatDate(rangeStart):'inicio')+' → '+(rangeEnd?formatDate(rangeEnd):'hoy')) : '📅 Todo el tiempo';
-  var rankHtml = mpts.map(function(m,i){
-    var rc = i===0?'gold':i===1?'silver':i===2?'bronze':'';
-    var dots = days.map(function(d){ var done=weekAtt.find(function(a){return a.member_id===m.id&&a.day_key===d.key;}); var past=new Date(d.date)<new Date(new Date().setHours(0,0,0,0)); return done?'🟢':(past?'🔴':'⚪'); }).join('');
-    return '<div class="member-row"><div class="rank '+rc+'">'+(i+1)+'</div><div class="avatar">'+m.emoji+'</div>'+
+  var rangeLabel=(rangeStart||rangeEnd)?('📅 '+(rangeStart?fmt(rangeStart):'inicio')+' → '+(rangeEnd?fmt(rangeEnd):'hoy')):'📅 Todo el tiempo';
+  var rankHtml=mpts.map(function(m,i){
+    var rc=i===0?'gold':i===1?'silver':i===2?'bronze':'';
+    var dots=days.map(function(d){var done=weekAtt.find(function(a){return a.member_id===m.id&&a.day_key===d.key;});var past=new Date(d.date)<new Date(new Date().setHours(0,0,0,0));return done?'🟢':(past?'🔴':'⚪');}).join('');
+    return'<div class="member-row"><div class="rank '+rc+'">'+(i+1)+'</div><div class="avatar">'+m.emoji+'</div>'+
       '<div class="member-info"><div class="member-name">'+m.name+'</div><div class="member-stats">'+dots+' · '+m.weekDays+'/4</div></div>'+
       '<div class="member-pts">'+m.pts+'<small>PTS</small></div></div>';
   }).join('');
-
-  c.innerHTML = alertHtml +
-    '<div class="card"><div class="card-title">🏆 '+rangeLabel+'</div>'+(members.length?rankHtml:'<div class="empty-state"><div class="big">👥</div>Sin miembros</div>')+'</div>'+
-    '<div class="stat-grid" style="margin:0 16px 14px">'+
-    '<div class="stat-box"><div class="stat-val yellow">'+members.length+'</div><div class="stat-lbl">Miembros</div></div>'+
+  c.innerHTML=alertHtml+'<div class="card"><div class="card-title">🏆 '+rangeLabel+'</div>'+(members.length?rankHtml:'<div class="empty-state"><div class="big">👥</div>Sin miembros</div>')+'</div>'+
+    '<div class="stat-grid" style="margin:0 16px 14px"><div class="stat-box"><div class="stat-val yellow">'+members.length+'</div><div class="stat-lbl">Miembros</div></div>'+
     '<div class="stat-box"><div class="stat-val green">'+mpts.filter(function(m){return m.weekDays>=4;}).length+'</div><div class="stat-lbl">Al dia</div></div></div>';
 }
 
-// ===== SEMANA WITH NAVIGATION =====
-async function renderSemana() {
+// ===== SEMANA =====
+async function renderSemana(){
   renderGroupSelector('semana-groups','semana');
-  var c = document.getElementById('semana-content');
-  if (!currentGroupId) { c.innerHTML=''; return; }
+  var c=document.getElementById('semana-content');
+  if(!currentGroupId){c.innerHTML='';return;}
   showLoading('Cargando...');
-  var days = getWeekDaysOffset(weekOffset);
-  var today = todayKey();
-  var isCurrentWeek = weekOffset === 0;
-  var r1 = await sb.from('members').select('*').eq('group_id',currentGroupId).order('created_at');
-  var r2 = await sb.from('attendance').select('*').eq('group_id',currentGroupId).in('day_key',days.map(function(d){return d.key;}));
+  var days=getWeekDays(weekOffsetSemana),today=todayKey();
+  var r1=await sb.from('members').select('*').eq('group_id',currentGroupId).order('created_at');
+  var r2=await sb.from('attendance').select('*').eq('group_id',currentGroupId).in('day_key',days.map(function(d){return d.key;}));
   hideLoading();
-  var members = r1.data||[], att = r2.data||[];
-  var wh = days.map(function(d){ return '<div class="week-day-label">'+d.label+'</div>'; }).join('');
-
-  var navHtml = '<div class="week-nav">'+
-    '<button class="week-nav-btn" onclick="changeWeek(-1)">← Ant</button>'+
-    '<div class="week-label">'+weekLabel(days)+'</div>'+
-    '<button class="week-nav-btn" onclick="changeWeek(1)" '+(weekOffset>=0?'style="opacity:.4;pointer-events:none"':'')+'>Sig →</button>'+
-    '</div>';
-
-  var membersHtml = members.map(function(m) {
-    var cells = days.map(function(d) {
-      var done = att.find(function(a){return a.member_id===m.id&&a.day_key===d.key;});
-      var isToday = d.key===today;
-      var isPast = new Date(d.date)<new Date(new Date().setHours(0,0,0,0));
-      var isFuture = !isPast && !isToday;
-      var cls = done?'done':(isFuture?'future':'');
-      var canClick = !isFuture || !isCurrentWeek;
-      return '<div class="day-cell '+cls+' '+(isToday?'today':'')+'" '+(canClick?'onclick="toggleDay(\''+d.key+'\',\''+m.id+'\',\''+m.name+'\')"':'')+'>'+( done?'✅':((isPast||isToday)?'○':'') )+'</div>';
+  var members=r1.data||[],att=r2.data||[];
+  var wh=days.map(function(d){return'<div class="week-day-label">'+d.label+'</div>';}).join('');
+  var navHtml='<div class="week-nav">'+
+    '<button class="week-nav-btn" onclick="chgWeek(\'semana\',-1)">← Ant</button>'+
+    '<div class="week-label">'+weekLbl(days)+'</div>'+
+    '<button class="week-nav-btn '+(weekOffsetSemana>=0?'disabled':'')+'" onclick="chgWeek(\'semana\',1)">Sig →</button></div>';
+  var membersHtml=members.map(function(m){
+    var cells=days.map(function(d){
+      var done=att.find(function(a){return a.member_id===m.id&&a.day_key===d.key;});
+      var isToday=d.key===today,isPast=new Date(d.date)<new Date(new Date().setHours(0,0,0,0));
+      var isFuture=!isPast&&!isToday&&weekOffsetSemana===0;
+      var cls=done?'done':(isFuture?'future':'');
+      return'<div class="day-cell '+cls+' '+(isToday?'today':'')+'" onclick="toggleDay(\''+d.key+'\',\''+m.id+'\',\''+m.name+'\')">'+(done?'✅':((isPast||isToday)?'○':''))+'</div>';
     }).join('');
-    var wk = att.filter(function(a){return a.member_id===m.id;}).length;
-    var miss = Math.max(0,4-wk);
-    return '<div class="card" style="margin-bottom:10px">'+
+    var wk=att.filter(function(a){return a.member_id===m.id;}).length,miss=Math.max(0,4-wk);
+    return'<div class="card" style="margin-bottom:10px">'+
       '<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">'+
       '<div class="avatar" style="width:36px;height:36px;font-size:18px">'+m.emoji+'</div>'+
       '<div><div style="font-weight:800;font-size:15px">'+m.name+'</div>'+
       '<div style="font-size:11px;color:'+(wk>=4?'var(--accent3)':'var(--accent2)')+'">'+wk+'/4 dias '+(wk>=4?'Sin sancion':'₡'+(miss*1000).toLocaleString()+' en riesgo')+'</div></div></div>'+
-      '<div class="week-header">'+wh+'</div>'+
-      '<div class="week-grid">'+cells+'</div></div>';
-  }).join('') || '<div class="empty-state"><div class="big">📅</div>Sin miembros</div>';
-
-  c.innerHTML = navHtml + membersHtml;
+      '<div class="week-header">'+wh+'</div><div class="week-grid">'+cells+'</div></div>';
+  }).join('')||'<div class="empty-state"><div class="big">📅</div>Sin miembros</div>';
+  c.innerHTML=navHtml+membersHtml;
 }
 
-function changeWeek(dir) {
-  if (weekOffset + dir > 0) return;
-  weekOffset += dir;
+function chgWeek(page,dir){
+  if(page==='semana'){if(weekOffsetSemana+dir>0)return;weekOffsetSemana+=dir;renderSemana();}
+  else if(page==='retos'){if(weekOffsetRetos+dir>0)return;weekOffsetRetos+=dir;renderRetos();}
+}
+
+async function toggleDay(dayKey,memberId,memberName){
+  var ex=await sb.from('attendance').select('id').eq('group_id',currentGroupId).eq('member_id',memberId).eq('day_key',dayKey).maybeSingle();
+  if(ex.data){await sb.from('attendance').delete().eq('id',ex.data.id);showToast(memberName+' - falta removida','error');}
+  else{await sb.from('attendance').insert({group_id:currentGroupId,member_id:memberId,day_key:dayKey});showToast(memberName+' - entreno registrado');}
   renderSemana();
 }
 
-async function toggleDay(dayKey, memberId, memberName) {
-  var ex = await sb.from('attendance').select('id').eq('group_id',currentGroupId).eq('member_id',memberId).eq('day_key',dayKey).maybeSingle();
-  if (ex.data) {
-    await sb.from('attendance').delete().eq('id',ex.data.id);
-    showToast(memberName+' - falta removida','error');
-  } else {
-    await sb.from('attendance').insert({group_id:currentGroupId,member_id:memberId,day_key:dayKey});
-    showToast(memberName+' - entreno registrado');
-  }
-  renderSemana();
-}
-
-// ===== RETOS WITH DAILY + CUSTOM POINTS =====
-async function renderRetos() {
+// ===== RETOS =====
+async function renderRetos(){
   renderGroupSelector('retos-groups','retos');
-  var c = document.getElementById('retos-content');
-  if (!currentGroupId) { c.innerHTML=''; return; }
+  var c=document.getElementById('retos-content');
+  if(!currentGroupId){c.innerHTML='';return;}
   showLoading('Cargando...');
-  var days = getWeekDaysOffset(0);
-  var today = todayKey();
-  var r1 = await sb.from('retos').select('*').eq('group_id',currentGroupId).eq('active',true).maybeSingle();
-  var r2 = await sb.from('members').select('*').eq('group_id',currentGroupId).order('created_at');
-  var r3 = await sb.from('cal_retos').select('*,cal_entries(*)').eq('group_id',currentGroupId).eq('active',true).maybeSingle();
+  var days=getWeekDays(weekOffsetRetos),today=todayKey();
+  var r1=await sb.from('retos').select('*').eq('group_id',currentGroupId).eq('active',true).maybeSingle();
+  var r2=await sb.from('members').select('*').eq('group_id',currentGroupId).order('created_at');
+  var r3=await sb.from('cal_retos').select('*,cal_entries(*)').eq('group_id',currentGroupId).eq('active',true).maybeSingle();
   hideLoading();
-  var reto = r1.data, members = r2.data||[], cr = r3.data;
+  var reto=r1.data,members=r2.data||[],cr=r3.data;
 
-  var retoHtml = '';
-  if (reto) {
-    var isDaily = reto.is_daily || false;
-    var typeLabel = isDaily ? '<span class="reto-type-badge">DIARIO</span>' : '';
+  var navHtml='<div class="week-nav">'+
+    '<button class="week-nav-btn" onclick="chgWeek(\'retos\',-1)">← Ant</button>'+
+    '<div class="week-label">'+weekLbl(days)+'</div>'+
+    '<button class="week-nav-btn '+(weekOffsetRetos>=0?'disabled':'')+'" onclick="chgWeek(\'retos\',1)">Sig →</button></div>';
 
-    if (isDaily) {
-      // Daily reto: show grid per member per day
-      var r4 = await sb.from('reto_attendance').select('*').eq('reto_id',reto.id);
-      var raData = r4.data || [];
-      var memberRows = members.map(function(m) {
-        var mRa = raData.filter(function(a){return a.member_id===m.id;});
-        var completedDays = {};
-        mRa.forEach(function(a){ if(a.day_key) completedDays[a.day_key]=true; });
-        var totalPts = mRa.length * reto.points;
-        var dayCells = days.map(function(d) {
-          var done = completedDays[d.key];
-          var isPast = new Date(d.date)<new Date(new Date().setHours(0,0,0,0));
-          var isToday = d.key===today;
-          var cls = done?'done':(!isPast&&!isToday?'future':'');
-          return '<div class="reto-day-cell '+cls+'" onclick="toggleDailyReto(\''+reto.id+'\',\''+m.id+'\',\''+d.key+'\')">'+d.label+'</div>';
+  var retoHtml='';
+  if(reto){
+    var isDaily=reto.is_daily||false;
+    if(isDaily){
+      var r4=await sb.from('reto_attendance').select('*').eq('reto_id',reto.id);
+      var raData=r4.data||[];
+      var memberRows=members.map(function(m){
+        var mRa=raData.filter(function(a){return a.member_id===m.id;});
+        var completedDays={};mRa.forEach(function(a){if(a.day_key)completedDays[a.day_key]=true;});
+        var totalPts=mRa.length*reto.points;
+        var dayCells=days.map(function(d){
+          var done=completedDays[d.key];
+          var isPast=new Date(d.date)<new Date(new Date().setHours(0,0,0,0));
+          var isToday=d.key===today;
+          var isFuture=!isPast&&!isToday&&weekOffsetRetos===0;
+          var cls=done?'done':(isFuture?'future':'');
+          return'<div class="reto-day-cell '+cls+'" onclick="toggleDR(\''+reto.id+'\',\''+m.id+'\',\''+d.key+'\')">'+d.label+'</div>';
         }).join('');
-        return '<div class="member-row"><div class="avatar" style="width:36px;height:36px;font-size:16px">'+m.emoji+'</div>'+
+        return'<div class="member-row"><div class="avatar" style="width:36px;height:36px;font-size:16px">'+m.emoji+'</div>'+
           '<div class="member-info"><div class="member-name">'+m.name+'</div>'+
           '<div class="reto-daily-grid">'+dayCells+'</div></div>'+
-          '<div style="font-family:\'Bebas Neue\',sans-serif;font-size:20px;color:var(--accent);min-width:40px;text-align:right">+'+totalPts+'</div>'+
-          '</div>';
+          '<div style="font-family:\'Bebas Neue\',sans-serif;font-size:18px;color:var(--accent);min-width:36px;text-align:right">+'+totalPts+'</div></div>';
       }).join('');
-      retoHtml = '<div class="reto-card"><div class="reto-badge">🔥 Reto activo '+typeLabel+'</div>'+
+      retoHtml='<div class="reto-card"><div class="reto-badge">🔥 Reto diario activo</div>'+
         '<div class="reto-title">'+reto.description+'</div>'+
         '<div class="reto-pts">⭐ +'+reto.points+' pts por dia completado</div></div>'+
         '<div class="card"><div class="card-title">Progreso diario</div>'+memberRows+'</div>'+
-        '<div style="padding:0 16px"><button class="btn-secondary" onclick="clearReto(\''+reto.id+'\')">Eliminar reto</button></div>';
+        '<div style="padding:0 16px"><button class="btn-danger" onclick="clearReto(\''+reto.id+'\')">🗑 Eliminar reto (borra puntos)</button></div>';
     } else {
-      // Weekly reto: mark per member once
-      var r4b = await sb.from('reto_attendance').select('member_id').eq('reto_id',reto.id);
-      var ram = {};
-      (r4b.data||[]).forEach(function(r){ ram[r.member_id]=true; });
-      var memberRows2 = members.map(function(m){ return '<div class="member-row"><div class="avatar">'+m.emoji+'</div><div class="member-info"><div class="member-name">'+m.name+'</div></div><button class="paid-btn '+(ram[m.id]?'is-paid':'')+'" onclick="toggleRA(\''+reto.id+'\',\''+m.id+'\',\''+m.name+'\')">'+(ram[m.id]?'Hecho':'Marcar')+'</button></div>'; }).join('');
-      retoHtml = '<div class="reto-card"><div class="reto-badge">🔥 Reto activo</div>'+
+      var r4b=await sb.from('reto_attendance').select('member_id').eq('reto_id',reto.id);
+      var ram={};(r4b.data||[]).forEach(function(r){ram[r.member_id]=true;});
+      var memberRows2=members.map(function(m){
+        return'<div class="member-row"><div class="avatar">'+m.emoji+'</div>'+
+          '<div class="member-info"><div class="member-name">'+m.name+'</div></div>'+
+          '<button class="paid-btn '+(ram[m.id]?'is-paid':'')+'" onclick="toggleRA(\''+reto.id+'\',\''+m.id+'\',\''+m.name+'\')">'+(ram[m.id]?'Hecho':'Marcar')+'</button></div>';
+      }).join('');
+      retoHtml='<div class="reto-card"><div class="reto-badge">🔥 Reto semanal activo</div>'+
         '<div class="reto-title">'+reto.description+'</div>'+
         '<div class="reto-pts">⭐ +'+reto.points+' puntos al completar</div></div>'+
         '<div class="card"><div class="card-title">Quien lo completo?</div>'+memberRows2+'</div>'+
-        '<div style="padding:0 16px"><button class="btn-secondary" onclick="clearReto(\''+reto.id+'\')">Eliminar reto</button></div>';
+        '<div style="padding:0 16px"><button class="btn-danger" onclick="clearReto(\''+reto.id+'\')">🗑 Eliminar reto (borra puntos)</button></div>';
     }
   } else {
-    retoHtml = '<div class="card" style="text-align:center;padding:32px"><div style="font-size:48px;margin-bottom:12px">🎯</div><div style="font-weight:800">Sin reto activo</div></div>';
+    retoHtml='<div class="card" style="text-align:center;padding:32px"><div style="font-size:48px;margin-bottom:12px">🎯</div><div style="font-weight:800">Sin reto activo</div></div>';
   }
 
-  var calHtml = '';
-  if (cr) {
+  var calHtml='';
+  if(cr){
     var entries=cr.cal_entries||[];
     var tA=entries.filter(function(e){return e.team==='A';}).reduce(function(s,e){return s+e.calories;},0);
     var tB=entries.filter(function(e){return e.team==='B';}).reduce(function(s,e){return s+e.calories;},0);
-    var tot=tA+tB||1; var pA=Math.round((tA/tot)*100);
+    var tot=tA+tB||1,pA=Math.round((tA/tot)*100);
     calHtml='<div class="card"><div class="card-title">Reto Calorias</div>'+
       '<div class="teams-vs"><div class="team-box"><div class="team-name">'+cr.team_a+'</div><div class="team-cals '+(tA>=tB?'':'losing')+'">'+tA.toLocaleString()+'</div></div>'+
       '<div class="vs-text">VS</div>'+
       '<div class="team-box"><div class="team-name">'+cr.team_b+'</div><div class="team-cals '+(tB>tA?'':'losing')+'">'+tB.toLocaleString()+'</div></div></div>'+
       '<div class="progress-bar"><div class="progress-fill" style="width:'+pA+'%"></div></div>'+
-      '<div style="display:flex;gap:8px;margin-top:14px"><button class="btn-secondary" style="flex:1" onclick="openCE(\''+cr.id+'\',\''+cr.team_a+'\',\''+cr.team_b+'\')">+ Calorias</button>'+
-      '<button class="btn-secondary" style="flex:1;color:var(--accent2)" onclick="clearCR(\''+cr.id+'\')">Finalizar</button></div></div>';
+      '<div style="display:flex;gap:8px;margin-top:14px">'+
+      '<button class="btn-secondary" style="flex:1" onclick="openCE(\''+cr.id+'\',\''+cr.team_a+'\',\''+cr.team_b+'\')">+ Calorias</button>'+
+      '<button class="btn-danger" style="flex:1;margin:0" onclick="clearCR(\''+cr.id+'\')">Finalizar</button></div></div>';
   } else {
     calHtml='<div style="padding:0 16px 14px"><button class="btn-secondary" onclick="openModal(\'modal-calorias\')">Crear reto calorias</button></div>';
   }
-  c.innerHTML = retoHtml + calHtml + '<div style="padding:0 16px"><button class="btn-primary" style="margin-top:4px" onclick="openModal(\'modal-reto\')">+ ACTIVAR RETO EXTRA</button></div>';
+  c.innerHTML=navHtml+retoHtml+calHtml+'<div style="padding:0 16px"><button class="btn-primary" style="margin-top:4px" onclick="openModal(\'modal-reto\')">+ ACTIVAR RETO EXTRA</button></div>';
 }
 
-async function toggleDailyReto(retoId, memberId, dayKey) {
-  var ex = await sb.from('reto_attendance').select('id').eq('reto_id',retoId).eq('member_id',memberId).eq('day_key',dayKey).maybeSingle();
-  if (ex.data) { await sb.from('reto_attendance').delete().eq('id',ex.data.id); showToast('Removido','error'); }
-  else { await sb.from('reto_attendance').insert({reto_id:retoId,member_id:memberId,group_id:currentGroupId,day_key:dayKey}); showToast('Marcado'); }
+async function toggleDR(retoId,memberId,dayKey){
+  var ex=await sb.from('reto_attendance').select('id').eq('reto_id',retoId).eq('member_id',memberId).eq('day_key',dayKey).maybeSingle();
+  if(ex.data){await sb.from('reto_attendance').delete().eq('id',ex.data.id);showToast('Removido','error');}
+  else{await sb.from('reto_attendance').insert({reto_id:retoId,member_id:memberId,group_id:currentGroupId,day_key:dayKey});showToast('Marcado');}
   renderRetos();
 }
-
-async function toggleRA(rid, mid, name) {
-  var ex = await sb.from('reto_attendance').select('id').eq('reto_id',rid).eq('member_id',mid).maybeSingle();
-  if (ex.data) { await sb.from('reto_attendance').delete().eq('id',ex.data.id); showToast(name+' removido','error'); }
-  else { await sb.from('reto_attendance').insert({reto_id:rid,member_id:mid,group_id:currentGroupId}); showToast(name+' completo'); }
+async function toggleRA(rid,mid,name){
+  var ex=await sb.from('reto_attendance').select('id').eq('reto_id',rid).eq('member_id',mid).maybeSingle();
+  if(ex.data){await sb.from('reto_attendance').delete().eq('id',ex.data.id);showToast(name+' removido','error');}
+  else{await sb.from('reto_attendance').insert({reto_id:rid,member_id:mid,group_id:currentGroupId});showToast(name+' completo');}
   renderRetos();
 }
-async function clearReto(id) { if(!confirm('Eliminar reto?'))return; await sb.from('retos').update({active:false}).eq('id',id); showToast('Reto eliminado'); renderRetos(); }
-async function clearCR(id) { if(!confirm('Finalizar?'))return; await sb.from('cal_retos').update({active:false}).eq('id',id); showToast('Finalizado'); renderRetos(); }
-function openCE(id,a,b) { var s=document.getElementById('cal-entry-team'); s.innerHTML='<option value="A">'+a+'</option><option value="B">'+b+'</option>'; s.dataset.crid=id; openModal('modal-cal-entry'); }
-async function addCalEntry() {
-  var team=document.getElementById('cal-entry-team').value;
-  var crid=document.getElementById('cal-entry-team').dataset.crid;
-  var cals=parseInt(document.getElementById('cal-entry-value').value)||0;
-  var member=document.getElementById('cal-entry-member').value.trim();
+async function clearReto(id){
+  if(!confirm('Eliminar reto? Se borraran los puntos de todos los miembros.'))return;
+  // Delete all reto_attendance first (removes points from ranking)
+  await sb.from('reto_attendance').delete().eq('reto_id',id);
+  // Then deactivate reto
+  await sb.from('retos').update({active:false}).eq('id',id);
+  showToast('Reto eliminado y puntos removidos');renderRetos();
+}
+async function clearCR(id){if(!confirm('Finalizar?'))return;await sb.from('cal_retos').update({active:false}).eq('id',id);showToast('Finalizado');renderRetos();}
+function openCE(id,a,b){var s=document.getElementById('cal-entry-team');s.innerHTML='<option value="A">'+a+'</option><option value="B">'+b+'</option>';s.dataset.crid=id;openModal('modal-cal-entry');}
+async function addCalEntry(){
+  var team=document.getElementById('cal-entry-team').value,crid=document.getElementById('cal-entry-team').dataset.crid;
+  var cals=parseInt(document.getElementById('cal-entry-value').value)||0,member=document.getElementById('cal-entry-member').value.trim();
   if(!cals||!member){showToast('Completa los campos','error');return;}
   await sb.from('cal_entries').insert({cal_reto_id:crid,team:team,calories:cals,member_name:member,group_id:currentGroupId});
-  document.getElementById('cal-entry-value').value='';
-  document.getElementById('cal-entry-member').value='';
-  closeModal('modal-cal-entry'); showToast(cals+' kcal agregadas'); renderRetos();
+  document.getElementById('cal-entry-value').value='';document.getElementById('cal-entry-member').value='';
+  closeModal('modal-cal-entry');showToast(cals+' kcal agregadas');renderRetos();
 }
 
 // ===== CAJA =====
-async function renderCaja() {
+async function renderCaja(){
   renderGroupSelector('caja-groups','caja');
-  var c = document.getElementById('caja-content');
-  if (!currentGroupId) { c.innerHTML=''; return; }
+  var c=document.getElementById('caja-content');
+  if(!currentGroupId){c.innerHTML='';return;}
   showLoading('Cargando...');
-  var now = new Date();
-  var month = now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0');
-  var r1 = await sb.from('members').select('*').eq('group_id',currentGroupId).order('created_at');
-  var r2 = await sb.from('payments').select('*').eq('group_id',currentGroupId).eq('month',month);
-  var r3 = await sb.from('attendance').select('*').eq('group_id',currentGroupId);
+  var now=new Date(),month=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0');
+  var r1=await sb.from('members').select('*').eq('group_id',currentGroupId).order('created_at');
+  var r2=await sb.from('payments').select('*').eq('group_id',currentGroupId).eq('month',month);
+  var r3=await sb.from('attendance').select('*').eq('group_id',currentGroupId);
   hideLoading();
-  var members=r1.data||[], payments=r2.data||[], allAtt=r3.data||[];
-  var ml = now.toLocaleString('es',{month:'long',year:'numeric'});
-  var pm={}, sm={};
-  payments.forEach(function(p){ if(p.type==='monthly')pm[p.member_id]=p.paid; if(p.type==='sanction')sm[p.member_id]=p.paid; });
+  var members=r1.data||[],payments=r2.data||[],allAtt=r3.data||[];
+  var ml=now.toLocaleString('es',{month:'long',year:'numeric'});
+  var pm={},sm={};
+  payments.forEach(function(p){if(p.type==='monthly')pm[p.member_id]=p.paid;if(p.type==='sanction')sm[p.member_id]=p.paid;});
   var wkG={};
-  allAtt.forEach(function(a){ var pts=a.day_key.split('-'); var d=new Date(parseInt(pts[0]),parseInt(pts[1])-1,parseInt(pts[2])); var dn=d.getDay()||7; var mon=new Date(d); mon.setDate(d.getDate()-dn+1); var wk=mon.toISOString().split('T')[0]; if(!wkG[wk])wkG[wk]={}; if(!wkG[wk][a.member_id])wkG[wk][a.member_id]=0; wkG[wk][a.member_id]++; });
-  var sanctions=members.map(function(m){ var td=0; Object.values(wkG).forEach(function(w){ var went=w[m.id]||0; if(went<4)td+=(4-went); }); return td>0?{memberId:m.id,name:m.name,days:td,amount:td*1000}:null; }).filter(Boolean);
+  allAtt.forEach(function(a){var pts=a.day_key.split('-');var d=new Date(parseInt(pts[0]),parseInt(pts[1])-1,parseInt(pts[2]));var dn=d.getDay()||7;var mon=new Date(d);mon.setDate(d.getDate()-dn+1);var wk=mon.toISOString().split('T')[0];if(!wkG[wk])wkG[wk]={};if(!wkG[wk][a.member_id])wkG[wk][a.member_id]=0;wkG[wk][a.member_id]++;});
+  var sanctions=members.map(function(m){var td=0;Object.values(wkG).forEach(function(w){var went=w[m.id]||0;if(went<4)td+=(4-went);});return td>0?{memberId:m.id,name:m.name,days:td,amount:td*1000}:null;}).filter(Boolean);
   var mPaid=members.filter(function(m){return pm[m.id];}).length*5000;
   var sPaid=sanctions.filter(function(s){return sm[s.memberId];}).reduce(function(t,s){return t+s.amount;},0);
   var total=mPaid+sPaid;
-  var mHtml=members.map(function(m){ return '<div class="payment-row"><div class="avatar" style="width:36px;height:36px;font-size:16px;margin-right:4px">'+m.emoji+'</div><div class="payment-info"><div class="payment-name">'+m.name+'</div><div class="payment-detail">Cuota '+ml+'</div></div><div class="payment-amount '+(pm[m.id]?'positive':'negative')+'">₡5.000</div><button class="toggle-paid '+(pm[m.id]?'paid':'')+'" onclick="togglePay(\''+m.id+'\',\'monthly\',\''+month+'\')">'+(pm[m.id]?'✓':'')+'</button></div>'; }).join('');
-  var sHtml=sanctions.length?sanctions.map(function(s){ return '<div class="payment-row"><div class="avatar" style="width:36px;height:36px;font-size:16px;margin-right:4px">⚠️</div><div class="payment-info"><div class="payment-name">'+s.name+'</div><div class="payment-detail">'+s.days+' dias · ₡1.000/dia</div></div><div class="payment-amount negative">₡'+s.amount.toLocaleString()+'</div><button class="toggle-paid '+(sm[s.memberId]?'paid':'')+'" onclick="togglePay(\''+s.memberId+'\',\'sanction\',\''+month+'\')">'+(sm[s.memberId]?'✓':'')+'</button></div>'; }).join(''):'<div style="text-align:center;color:var(--accent3);font-weight:800;padding:16px">Sin sanciones</div>';
+  var mHtml=members.map(function(m){return'<div class="payment-row"><div class="avatar" style="width:36px;height:36px;font-size:16px;margin-right:4px">'+m.emoji+'</div><div class="payment-info"><div class="payment-name">'+m.name+'</div><div class="payment-detail">Cuota '+ml+'</div></div><div class="payment-amount '+(pm[m.id]?'positive':'negative')+'">₡5.000</div><button class="toggle-paid '+(pm[m.id]?'paid':'')+'" onclick="togglePay(\''+m.id+'\',\'monthly\',\''+month+'\')">'+(pm[m.id]?'✓':'')+'</button></div>';}).join('');
+  var sHtml=sanctions.length?sanctions.map(function(s){return'<div class="payment-row"><div class="avatar" style="width:36px;height:36px;font-size:16px;margin-right:4px">⚠️</div><div class="payment-info"><div class="payment-name">'+s.name+'</div><div class="payment-detail">'+s.days+' dias · ₡1.000/dia</div></div><div class="payment-amount negative">₡'+s.amount.toLocaleString()+'</div><button class="toggle-paid '+(sm[s.memberId]?'paid':'')+'" onclick="togglePay(\''+s.memberId+'\',\'sanction\',\''+month+'\')">'+(sm[s.memberId]?'✓':'')+'</button></div>';}).join(''):'<div style="text-align:center;color:var(--accent3);font-weight:800;padding:16px">Sin sanciones</div>';
   c.innerHTML='<div class="caja-total"><div class="caja-label">Total recaudado</div><div class="caja-amount">₡'+total.toLocaleString()+'</div><div class="caja-sub">Cuotas + sanciones</div></div>'+
     '<div class="stat-grid" style="margin:0 16px 14px"><div class="stat-box"><div class="stat-val green">₡'+mPaid.toLocaleString()+'</div><div class="stat-lbl">Cuotas</div></div><div class="stat-box"><div class="stat-val red">₡'+sPaid.toLocaleString()+'</div><div class="stat-lbl">Sanciones</div></div></div>'+
     '<div class="card"><div class="card-title">Cuota mensual - '+ml+'</div>'+(mHtml||'<div class="empty-state">Sin miembros</div>')+'</div>'+
     '<div class="card"><div class="card-title">Sanciones</div>'+sHtml+'</div>';
 }
-async function togglePay(mid,type,month) {
+async function togglePay(mid,type,month){
   var ex=await sb.from('payments').select('id,paid').eq('group_id',currentGroupId).eq('member_id',mid).eq('type',type).eq('month',month).maybeSingle();
   if(ex.data){await sb.from('payments').update({paid:!ex.data.paid}).eq('id',ex.data.id);}
   else{await sb.from('payments').insert({group_id:currentGroupId,member_id:mid,type:type,month:month,paid:true});}
-  showToast('Pago actualizado'); renderCaja();
+  showToast('Pago actualizado');renderCaja();
 }
 
 // ===== ADMIN =====
-async function renderAdmin() {
-  var c = document.getElementById('admin-content');
-  if (!groups.length) {
-    c.innerHTML='<div class="empty-state" style="padding-top:60px"><div class="big">🏋️</div><div style="font-weight:800;font-size:18px;margin-bottom:8px">Bienvenido a GymReto</div><div style="font-size:13px;color:var(--muted);margin-bottom:24px">Crea tu primer grupo</div><button class="btn-primary" style="max-width:280px;margin:0 auto" onclick="openModal(\'modal-group\')">+ CREAR GRUPO</button></div>';
-    return;
-  }
-  var html = '';
-  for (var i=0;i<groups.length;i++) {
-    var g=groups[i];
-    var mr=await sb.from('members').select('*').eq('group_id',g.id).order('created_at');
-    var members=mr.data||[];
+async function renderAdmin(){
+  var c=document.getElementById('admin-content');
+  if(!groups.length){c.innerHTML='<div class="empty-state" style="padding-top:60px"><div class="big">🏋️</div><div style="font-weight:800;font-size:18px;margin-bottom:8px">Bienvenido a GymReto</div><div style="font-size:13px;color:var(--muted);margin-bottom:24px">Crea tu primer grupo</div><button class="btn-primary" style="max-width:280px;margin:0 auto" onclick="openModal(\'modal-group\')">+ CREAR GRUPO</button></div>';return;}
+  var html='';
+  for(var i=0;i<groups.length;i++){
+    var g=groups[i],mr=await sb.from('members').select('*').eq('group_id',g.id).order('created_at'),members=mr.data||[];
     html+='<div class="card" style="margin-bottom:10px">'+
       '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">'+
       '<div><div style="font-family:\'Bebas Neue\',sans-serif;font-size:22px">'+g.name+'</div>'+
@@ -624,58 +567,45 @@ async function renderAdmin() {
       '<button class="btn-secondary" style="flex:1;margin:0" onclick="currentGroupId=\''+g.id+'\';openModal(\'modal-member\')">+ Miembro</button>'+
       '<button class="btn-secondary" style="flex:1;margin:0" onclick="toggleML(\'ml-'+g.id+'\')">Ver miembros</button></div>'+
       '<div id="ml-'+g.id+'" style="display:none;margin-top:12px">'+
-      members.map(function(m){ return '<div class="member-row"><div class="avatar" style="width:36px;height:36px;font-size:16px">'+m.emoji+'</div><div class="member-info"><div class="member-name">'+m.name+'</div></div><button onclick="delMember(\''+m.id+'\')" style="background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer">✕</button></div>'; }).join('')+
+      members.map(function(m){return'<div class="member-row"><div class="avatar" style="width:36px;height:36px;font-size:16px">'+m.emoji+'</div><div class="member-info"><div class="member-name">'+m.name+'</div></div><button onclick="delMember(\''+m.id+'\')" style="background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer">✕</button></div>';}).join('')+
       (members.length?'':'<div style="color:var(--muted);font-size:13px;padding:8px 0">Sin miembros</div>')+
       '</div></div>';
   }
   html+='<div style="padding:0 16px"><button class="btn-primary" onclick="openModal(\'modal-group\')">+ CREAR NUEVO GRUPO</button></div>';
   c.innerHTML=html;
 }
-function toggleML(id){ var el=document.getElementById(id); el.style.display=el.style.display==='none'?'block':'none'; }
-
-async function createGroup() {
-  var name=document.getElementById('new-group-name').value.trim();
-  var admin=document.getElementById('new-group-admin').value.trim();
+function toggleML(id){var el=document.getElementById(id);el.style.display=el.style.display==='none'?'block':'none';}
+async function createGroup(){
+  var name=document.getElementById('new-group-name').value.trim(),admin=document.getElementById('new-group-admin').value.trim();
   if(!name||!admin){showToast('Completa todos los campos','error');return;}
-  showLoading('Creando grupo...');
-  try {
-    var res=await sb.from('groups').insert({name:name,admin_name:admin});
-    if(res.error)throw res.error;
-    document.getElementById('new-group-name').value='';
-    document.getElementById('new-group-admin').value='';
-    closeModal('modal-group');
-    var r=await sb.from('groups').select('*').order('created_at');
-    groups=r.data||[];
-    if(!currentGroupId&&groups.length)currentGroupId=groups[0].id;
-    hideLoading(); showToast('Grupo '+name+' creado'); renderAdmin();
-  } catch(e){ hideLoading(); showToast('Error: '+e.message,'error'); }
+  showLoading('Creando...');
+  try{var res=await sb.from('groups').insert({name:name,admin_name:admin});if(res.error)throw res.error;
+    document.getElementById('new-group-name').value='';document.getElementById('new-group-admin').value='';
+    closeModal('modal-group');var r=await sb.from('groups').select('*').order('created_at');groups=r.data||[];
+    if(!currentGroupId&&groups.length)currentGroupId=groups[0].id;hideLoading();showToast('Grupo '+name+' creado');renderAdmin();
+  }catch(e){hideLoading();showToast('Error: '+e.message,'error');}
 }
-async function addMember() {
+async function addMember(){
   var name=document.getElementById('new-member-name').value.trim();
   var emoji=document.getElementById('new-member-emoji').value.trim()||EMOJIS[Math.floor(Math.random()*EMOJIS.length)];
   if(!name){showToast('Escribe el nombre','error');return;}
   if(!currentGroupId){showToast('Selecciona un grupo','error');return;}
   showLoading('Añadiendo...');
-  try {
-    var res=await sb.from('members').insert({group_id:currentGroupId,name:name,emoji:emoji});
-    if(res.error)throw res.error;
-    document.getElementById('new-member-name').value='';
-    document.getElementById('new-member-emoji').value='';
-    closeModal('modal-member'); hideLoading(); showToast(name+' añadido'); renderAdmin();
-  } catch(e){ hideLoading(); showToast('Error: '+e.message,'error'); }
+  try{var res=await sb.from('members').insert({group_id:currentGroupId,name:name,emoji:emoji});if(res.error)throw res.error;
+    document.getElementById('new-member-name').value='';document.getElementById('new-member-emoji').value='';
+    closeModal('modal-member');hideLoading();showToast(name+' añadido');renderAdmin();
+  }catch(e){hideLoading();showToast('Error: '+e.message,'error');}
 }
-async function delGroup(gid) {
+async function delGroup(gid){
   if(!confirm('Eliminar grupo?'))return;
   showLoading('Eliminando...');
   await sb.from('groups').delete().eq('id',gid);
-  var r=await sb.from('groups').select('*').order('created_at');
-  groups=r.data||[];
+  var r=await sb.from('groups').select('*').order('created_at');groups=r.data||[];
   if(currentGroupId===gid)currentGroupId=groups.length?groups[0].id:null;
-  hideLoading(); showToast('Grupo eliminado'); renderAdmin();
+  hideLoading();showToast('Grupo eliminado');renderAdmin();
 }
-async function delMember(mid) { if(!confirm('Eliminar miembro?'))return; await sb.from('members').delete().eq('id',mid); showToast('Miembro eliminado'); renderAdmin(); }
-
-async function addReto() {
+async function delMember(mid){if(!confirm('Eliminar miembro?'))return;await sb.from('members').delete().eq('id',mid);showToast('Miembro eliminado');renderAdmin();}
+async function addReto(){
   var desc=document.getElementById('new-reto-desc').value.trim();
   var pts=parseInt(document.getElementById('new-reto-pts').value)||3;
   var isDaily=document.getElementById('reto-daily-toggle').checked;
@@ -684,17 +614,15 @@ async function addReto() {
   await sb.from('retos').insert({group_id:currentGroupId,description:desc,points:pts,active:true,is_daily:isDaily});
   document.getElementById('new-reto-desc').value='';
   document.getElementById('reto-daily-toggle').checked=false;
-  closeModal('modal-reto'); showToast('Reto activado'); renderRetos();
+  closeModal('modal-reto');showToast('Reto activado');renderRetos();
 }
-async function createCalReto() {
-  var a=document.getElementById('cal-team-a').value.trim();
-  var b=document.getElementById('cal-team-b').value.trim();
+async function createCalReto(){
+  var a=document.getElementById('cal-team-a').value.trim(),b=document.getElementById('cal-team-b').value.trim();
   if(!a||!b){showToast('Escribe los nombres','error');return;}
   await sb.from('cal_retos').update({active:false}).eq('group_id',currentGroupId).eq('active',true);
   await sb.from('cal_retos').insert({group_id:currentGroupId,team_a:a,team_b:b,active:true});
-  document.getElementById('cal-team-a').value='';
-  document.getElementById('cal-team-b').value='';
-  closeModal('modal-calorias'); showToast('Reto creado'); renderRetos();
+  document.getElementById('cal-team-a').value='';document.getElementById('cal-team-b').value='';
+  closeModal('modal-calorias');showToast('Reto creado');renderRetos();
 }
 
 initDB();

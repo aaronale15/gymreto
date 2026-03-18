@@ -42,42 +42,38 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
 .week-header{display:flex;gap:6px;margin-bottom:6px;}
 .week-day-label{flex:1;text-align:center;font-size:10px;font-weight:800;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;}
 .week-grid{display:flex;gap:6px;}
-.day-cell{flex:1;aspect-ratio:1;border-radius:10px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;transition:all .2s;position:relative;}
+.day-cell{flex:1;aspect-ratio:1;border-radius:10px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;transition:all .2s;}
 .day-cell.done{background:rgba(240,255,68,.15);border-color:var(--accent);}
 .day-cell.future{opacity:.3;cursor:default;}
 .day-cell.today{border-color:var(--accent);box-shadow:0 0 0 2px rgba(240,255,68,.3);}
 .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 .stat-box{background:var(--surface2);border-radius:14px;padding:16px;text-align:center;}
 .stat-val{font-family:'Bebas Neue',sans-serif;font-size:32px;line-height:1;margin-bottom:4px;}
-.stat-val.green{color:var(--accent3);}.stat-val.yellow{color:var(--accent);}.stat-val.red{color:var(--accent2);}.stat-val.gold{color:var(--gold);}
+.stat-val.green{color:var(--accent3);}.stat-val.yellow{color:var(--accent);}.stat-val.red{color:var(--accent2);}
 .stat-lbl{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;}
 .reto-card{background:linear-gradient(135deg,#1a2a1a,#1a1a2a);border:1px solid rgba(240,255,68,.2);border-radius:20px;padding:20px;margin:0 16px 14px;}
-.reto-badge{display:inline-block;background:var(--accent);color:#000;font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:12px;}
+.reto-badge{display:inline-block;background:var(--accent);color:#000;font-size:10px;font-weight:800;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:12px;}
 .reto-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1px;margin-bottom:4px;}
-.reto-desc{font-size:13px;color:var(--muted);line-height:1.5;}
-.reto-pts{margin-top:14px;display:flex;align-items:center;gap:8px;font-weight:800;font-size:14px;color:var(--accent);}
+.reto-pts{margin-top:14px;font-weight:800;font-size:14px;color:var(--accent);}
 .teams-vs{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin-bottom:10px;}
 .team-box{background:var(--surface2);border-radius:14px;padding:14px;text-align:center;}
-.team-name{font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;}
+.team-name{font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;margin-bottom:8px;}
 .team-cals{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--accent);}
 .team-cals.losing{color:var(--muted);}
 .vs-text{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--muted);text-align:center;}
 .progress-bar{height:8px;background:var(--surface2);border-radius:4px;overflow:hidden;margin-top:10px;}
-.progress-fill{height:100%;background:var(--accent);border-radius:4px;transition:width .6s ease;}
+.progress-fill{height:100%;background:var(--accent);border-radius:4px;}
 .form-group{margin-bottom:14px;}
 .form-label{font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;display:block;}
-.form-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-family:'Nunito',sans-serif;font-size:15px;color:var(--text);outline:none;transition:border-color .2s;}
+.form-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-family:'Nunito',sans-serif;font-size:15px;color:var(--text);outline:none;}
 .form-input:focus{border-color:var(--accent);}
 .form-input::placeholder{color:var(--muted);opacity:.6;}
 .form-select{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-family:'Nunito',sans-serif;font-size:15px;color:var(--text);outline:none;appearance:none;}
-.btn-primary{width:100%;background:var(--accent);color:#000;border:none;border-radius:14px;padding:16px;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;cursor:pointer;transition:all .2s;}
-.btn-primary:active{transform:scale(.97);}
-.btn-secondary{width:100%;background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:14px;padding:14px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;cursor:pointer;transition:all .2s;margin-top:8px;}
-.btn-secondary:active{background:var(--border);}
+.btn-primary{width:100%;background:var(--accent);color:#000;border:none;border-radius:14px;padding:16px;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;cursor:pointer;}
+.btn-secondary{width:100%;background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:14px;padding:14px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;cursor:pointer;margin-top:8px;}
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:flex-end;justify-content:center;z-index:200;backdrop-filter:blur(4px);}
 .modal-overlay.open{display:flex;}
-.modal{background:var(--surface);border-radius:28px 28px 0 0;padding:24px 20px 48px;width:100%;max-width:430px;animation:slideUp .3s cubic-bezier(.34,1.56,.64,1);max-height:90vh;overflow-y:auto;}
-@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.modal{background:var(--surface);border-radius:28px 28px 0 0;padding:24px 20px 48px;width:100%;max-width:430px;max-height:90vh;overflow-y:auto;}
 .modal-handle{width:40px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 20px;}
 .modal-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1px;margin-bottom:20px;}
 .caja-total{background:linear-gradient(135deg,#1a1a0a,#1a1500);border:1px solid rgba(255,215,0,.2);border-radius:20px;padding:24px;margin:0 16px 14px;text-align:center;}
@@ -91,22 +87,22 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
 .payment-detail{font-size:11px;color:var(--muted);margin-top:2px;}
 .payment-amount{font-family:'Bebas Neue',sans-serif;font-size:20px;margin:0 12px;}
 .payment-amount.positive{color:var(--accent3);}.payment-amount.negative{color:var(--accent2);}
-.toggle-paid{width:32px;height:32px;border-radius:50%;border:2px solid var(--border);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:all .2s;}
+.toggle-paid{width:32px;height:32px;border-radius:50%;border:2px solid var(--border);background:none;cursor:pointer;font-size:16px;}
 .toggle-paid.paid{background:var(--accent3);border-color:var(--accent3);}
 .alert-auto{background:rgba(255,68,68,.1);border:1px solid rgba(255,68,68,.25);border-radius:16px;padding:16px 18px;margin:0 16px 14px;}
-.alert-title{font-weight:800;font-size:14px;color:var(--accent2);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.alert-title{font-weight:800;font-size:14px;color:var(--accent2);margin-bottom:8px;}
 .alert-item{font-size:13px;color:var(--muted);padding:4px 0;display:flex;justify-content:space-between;}
 .alert-item strong{color:var(--text);}
-.paid-btn{background:rgba(68,255,153,.12);border:1px solid rgba(68,255,153,.3);border-radius:8px;padding:6px 12px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:800;color:var(--accent3);cursor:pointer;transition:all .2s;}
+.paid-btn{background:rgba(68,255,153,.12);border:1px solid rgba(68,255,153,.3);border-radius:8px;padding:6px 12px;font-size:12px;font-weight:800;color:var(--accent3);cursor:pointer;}
 .paid-btn.is-paid{background:var(--accent3);color:#000;}
 .empty-state{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px;}
 .empty-state .big{font-size:48px;margin-bottom:12px;}
-.loading-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);align-items:center;justify-content:center;z-index:300;backdrop-filter:blur(4px);display:none;}
+.loading-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);align-items:center;justify-content:center;z-index:300;display:none;}
 .loading-overlay.show{display:flex;}
 .loading-box{background:var(--surface);border-radius:20px;padding:32px;text-align:center;}
 .loading-spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px;}
 @keyframes spin{to{transform:rotate(360deg)}}
-.toast{position:fixed;top:60px;left:50%;transform:translateX(-50%);background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 20px;font-size:13px;font-weight:700;z-index:400;opacity:0;transition:opacity .3s;pointer-events:none;max-width:90vw;text-align:center;}
+.toast{position:fixed;top:60px;left:50%;transform:translateX(-50%);background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 20px;font-size:13px;font-weight:700;z-index:400;opacity:0;transition:opacity .3s;pointer-events:none;max-width:85vw;text-align:center;white-space:pre-wrap;}
 .toast.show{opacity:1;}
 .toast.success{border-color:var(--accent3);color:var(--accent3);}
 .toast.error{border-color:var(--accent2);color:var(--accent2);}
@@ -120,6 +116,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
   </div>
 </div>
 <div class="toast" id="toast"></div>
+
 <div class="page active" id="page-ranking">
   <div class="page-header"><div class="page-title">GYM<span>RETO</span></div><div class="page-sub">Tabla de posiciones</div></div>
   <div class="group-selector" id="ranking-groups"></div>
@@ -141,21 +138,23 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
   <div id="caja-content"></div>
 </div>
 <div class="page" id="page-admin">
-  <div class="page-header"><div class="page-title">ADMIN <span>PANEL</span></div><div class="page-sub">Gestión de grupos</div></div>
+  <div class="page-header"><div class="page-title">ADMIN <span>PANEL</span></div><div class="page-sub">Gestion de grupos</div></div>
   <div id="admin-content"></div>
 </div>
+
 <nav class="bottom-nav">
-  <button class="nav-btn active" onclick="showPage('ranking',this)"><span class="ni">🏆</span>Ranking</button>
-  <button class="nav-btn" onclick="showPage('semana',this)"><span class="ni">📅</span>Semana</button>
-  <button class="nav-btn" onclick="showPage('retos',this)"><span class="ni">🔥</span>Retos</button>
-  <button class="nav-btn" onclick="showPage('caja',this)"><span class="ni">💰</span>Caja</button>
-  <button class="nav-btn" onclick="showPage('admin',this)"><span class="ni">⚙️</span>Admin</button>
+  <button class="nav-btn active" onclick="showPage('ranking',this)"><span class="ni">&#127942;</span>Ranking</button>
+  <button class="nav-btn" onclick="showPage('semana',this)"><span class="ni">&#128197;</span>Semana</button>
+  <button class="nav-btn" onclick="showPage('retos',this)"><span class="ni">&#128293;</span>Retos</button>
+  <button class="nav-btn" onclick="showPage('caja',this)"><span class="ni">&#128176;</span>Caja</button>
+  <button class="nav-btn" onclick="showPage('admin',this)"><span class="ni">&#9881;</span>Admin</button>
 </nav>
+
 <div class="modal-overlay" id="modal-group">
   <div class="modal">
     <div class="modal-handle"></div>
     <div class="modal-title">NUEVO GRUPO</div>
-    <div class="form-group"><label class="form-label">Nombre del grupo</label><input class="form-input" id="new-group-name" placeholder="Ej: Los Titanes"></div>
+    <div class="form-group"><label class="form-label">Nombre del grupo</label><input class="form-input" id="new-group-name" placeholder="Los Titanes"></div>
     <div class="form-group"><label class="form-label">Tu nombre (Admin)</label><input class="form-input" id="new-group-admin" placeholder="Tu nombre"></div>
     <button class="btn-primary" onclick="createGroup()">CREAR GRUPO</button>
     <button class="btn-secondary" onclick="closeModal('modal-group')">Cancelar</button>
@@ -166,7 +165,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
     <div class="modal-handle"></div>
     <div class="modal-title">AÑADIR MIEMBRO</div>
     <div class="form-group"><label class="form-label">Nombre</label><input class="form-input" id="new-member-name" placeholder="Nombre del miembro"></div>
-    <div class="form-group"><label class="form-label">Emoji (avatar)</label><input class="form-input" id="new-member-emoji" placeholder="💪" maxlength="2"></div>
+    <div class="form-group"><label class="form-label">Emoji</label><input class="form-input" id="new-member-emoji" placeholder="💪" maxlength="2"></div>
     <button class="btn-primary" onclick="addMember()">AÑADIR</button>
     <button class="btn-secondary" onclick="closeModal('modal-member')">Cancelar</button>
   </div>
@@ -175,8 +174,8 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
   <div class="modal">
     <div class="modal-handle"></div>
     <div class="modal-title">RETO EXTRA</div>
-    <div class="form-group"><label class="form-label">Descripción del reto</label><input class="form-input" id="new-reto-desc" placeholder="Ej: 100 abdominales"></div>
-    <div class="form-group"><label class="form-label">Puntos extra</label><input class="form-input" id="new-reto-pts" type="number" placeholder="3" value="3"></div>
+    <div class="form-group"><label class="form-label">Descripcion del reto</label><input class="form-input" id="new-reto-desc" placeholder="100 abdominales"></div>
+    <div class="form-group"><label class="form-label">Puntos extra</label><input class="form-input" id="new-reto-pts" type="number" value="3"></div>
     <button class="btn-primary" onclick="addReto()">ACTIVAR RETO</button>
     <button class="btn-secondary" onclick="closeModal('modal-reto')">Cancelar</button>
   </div>
@@ -184,9 +183,9 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
 <div class="modal-overlay" id="modal-calorias">
   <div class="modal">
     <div class="modal-handle"></div>
-    <div class="modal-title">RETO CALORÍAS</div>
-    <div class="form-group"><label class="form-label">Nombre equipo A</label><input class="form-input" id="cal-team-a" placeholder="Ej: Equipo Fuego"></div>
-    <div class="form-group"><label class="form-label">Nombre equipo B</label><input class="form-input" id="cal-team-b" placeholder="Ej: Equipo Hielo"></div>
+    <div class="modal-title">RETO CALORIAS</div>
+    <div class="form-group"><label class="form-label">Equipo A</label><input class="form-input" id="cal-team-a" placeholder="Equipo Fuego"></div>
+    <div class="form-group"><label class="form-label">Equipo B</label><input class="form-input" id="cal-team-b" placeholder="Equipo Hielo"></div>
     <button class="btn-primary" onclick="createCalReto()">CREAR RETO</button>
     <button class="btn-secondary" onclick="closeModal('modal-calorias')">Cancelar</button>
   </div>
@@ -194,257 +193,441 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Nunito
 <div class="modal-overlay" id="modal-cal-entry">
   <div class="modal">
     <div class="modal-handle"></div>
-    <div class="modal-title">INGRESAR CALORÍAS</div>
+    <div class="modal-title">INGRESAR CALORIAS</div>
     <div class="form-group"><label class="form-label">Equipo</label><select class="form-select" id="cal-entry-team"></select></div>
-    <div class="form-group"><label class="form-label">Calorías quemadas</label><input class="form-input" id="cal-entry-value" type="number" placeholder="350"></div>
+    <div class="form-group"><label class="form-label">Calorias quemadas</label><input class="form-input" id="cal-entry-value" type="number" placeholder="350"></div>
     <div class="form-group"><label class="form-label">Miembro</label><input class="form-input" id="cal-entry-member" placeholder="Nombre"></div>
     <button class="btn-primary" onclick="addCalEntry()">AGREGAR</button>
     <button class="btn-secondary" onclick="closeModal('modal-cal-entry')">Cancelar</button>
   </div>
 </div>
+
 <script>
-const SUPABASE_URL = 'https://cxrtjirmjeylkpqovoen.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4cnRqaXJtamV5bGtwcW92b2VuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4MDk3NjMsImV4cCI6MjA4OTM4NTc2M30.-iRZ6y75a_DQXcBeMfj_yHfC0oYs2bexxhWFsY4fp30';
-const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-let groups=[],currentGroupId=null;
-const DAYS=['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'];
-const EMOJIS=['💪','🔥','⚡','🦁','🐺','🦅','🏋️','🤸','🥊','🧗'];
+var SURL = 'https://cxrtjirmjeylkpqovoen.supabase.co';
+var SKEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4cnRqaXJtamV5bGtwcW92b2VuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4MDk3NjMsImV4cCI6MjA4OTM4NTc2M30.-iRZ6y75a_DQXcBeMfj_yHfC0oYs2bexxhWFsY4fp30';
+var sb = supabase.createClient(SURL, SKEY);
+var groups = [];
+var currentGroupId = null;
+var DAYS = ['Lun','Mar','Mie','Jue','Vie','Sab','Dom'];
+var EMOJIS = ['💪','🔥','⚡','🦁','🏋️','🤸','🥊'];
 
-function showLoading(t=‘Cargando…’){document.getElementById(‘loading-text’).textContent=t;document.getElementById(‘loading-overlay’).classList.add(‘show’);}
-function hideLoading(){document.getElementById(‘loading-overlay’).classList.remove(‘show’);}
-function showToast(msg,type=‘success’){const t=document.getElementById(‘toast’);t.textContent=msg;t.className=`toast show ${type}`;setTimeout(()=>t.classList.remove(‘show’),3000);}
-function openModal(id){document.getElementById(id).classList.add(‘open’);}
-function closeModal(id){document.getElementById(id).classList.remove(‘open’);}
-document.querySelectorAll(’.modal-overlay’).forEach(mo=>{mo.addEventListener(‘click’,e=>{if(e.target===mo)mo.classList.remove(‘open’);});});
-
-function getWeekDays(){
-const now=new Date(),day=now.getDay()||7,monday=new Date(now);
-monday.setDate(now.getDate()-day+1);
-return Array.from({length:7},(_,i)=>{const d=new Date(monday);d.setDate(monday.getDate()+i);return{key:`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`,label:DAYS[i],date:d};});
+function showLoading(t) {
+  document.getElementById('loading-text').textContent = t || 'Cargando...';
+  document.getElementById('loading-overlay').classList.add('show');
 }
-function todayKey(){const n=new Date();return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}-${String(n.getDate()).padStart(2,'0')}`;}
-
-async function initDB(){
-showLoading(‘Conectando…’);
-try{ await loadGroups(); }
-catch(e){ showToast(’Error conexión: ’+e.message,‘error’); }
-hideLoading();
+function hideLoading() {
+  document.getElementById('loading-overlay').classList.remove('show');
 }
-
-async function loadGroups(){
-const {data,error}=await sb.from(‘groups’).select(’*’).order(‘created_at’);
-if(error)throw error;
-groups=data||[];
-if(groups.length&&!currentGroupId)currentGroupId=groups[0].id;
+function showToast(msg, type) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show ' + (type || 'success');
+  setTimeout(function(){ t.classList.remove('show'); }, 3000);
 }
+function openModal(id) { document.getElementById(id).classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
 
-function showPage(name,btn){
-document.querySelectorAll(’.page’).forEach(p=>p.classList.remove(‘active’));
-document.querySelectorAll(’.nav-btn’).forEach(b=>b.classList.remove(‘active’));
-document.getElementById(‘page-’+name).classList.add(‘active’);
-btn.classList.add(‘active’);
-renderPage(name);
-}
-function renderPage(name){
-if(name===‘ranking’)renderRanking();
-else if(name===‘semana’)renderSemana();
-else if(name===‘retos’)renderRetos();
-else if(name===‘caja’)renderCaja();
-else if(name===‘admin’)renderAdmin();
-}
+document.querySelectorAll('.modal-overlay').forEach(function(mo) {
+  mo.addEventListener('click', function(e) {
+    if (e.target === mo) mo.classList.remove('open');
+  });
+});
 
-function renderGroupSelector(containerId,pageKey){
-const c=document.getElementById(containerId);
-if(!groups.length){c.innerHTML=’<div style="padding:12px 20px;font-size:13px;color:var(--muted)">Crea un grupo en Admin ⚙️</div>’;return;}
-c.innerHTML=groups.map(g=>`<div class="group-chip ${currentGroupId===g.id?'active':''}" onclick="selectGroup('${g.id}','${pageKey}')">${g.name}</div>`).join(’’);
+function getWeekDays() {
+  var now = new Date();
+  var day = now.getDay() || 7;
+  var monday = new Date(now);
+  monday.setDate(now.getDate() - day + 1);
+  var result = [];
+  for (var i = 0; i < 7; i++) {
+    var d = new Date(monday);
+    d.setDate(monday.getDate() + i);
+    var key = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+    result.push({ key: key, label: DAYS[i], date: d });
+  }
+  return result;
 }
-async function selectGroup(gid,pageKey){currentGroupId=gid;await renderPage(pageKey);}
-
-async function renderRanking(){
-renderGroupSelector(‘ranking-groups’,‘ranking’);
-const c=document.getElementById(‘ranking-content’);
-if(!currentGroupId){c.innerHTML=’<div class="empty-state"><div class="big">👥</div>Sin grupo</div>’;return;}
-showLoading(‘Cargando ranking…’);
-const days=getWeekDays();
-const [mRes,aRes]=await Promise.all([sb.from(‘members’).select(’*’).eq(‘group_id’,currentGroupId).order(‘created_at’),sb.from(‘attendance’).select(’*’).eq(‘group_id’,currentGroupId).in(‘day_key’,days.map(d=>d.key))]);
-hideLoading();
-const members=mRes.data||[],att=aRes.data||[];
-const {data:allAtt}=await sb.from(‘attendance’).select(’*’).eq(‘group_id’,currentGroupId);
-const {data:retoAtt}=await sb.from(‘reto_attendance’).select(’*’).eq(‘group_id’,currentGroupId);
-const mpts=members.map(m=>({…m,pts:((allAtt||[]).filter(a=>a.member_id===m.id).length+(retoAtt||[]).filter(a=>a.member_id===m.id).length)*3,weekDays:att.filter(a=>a.member_id===m.id).length})).sort((a,b)=>b.pts-a.pts);
-const sanctioned=mpts.filter(m=>m.weekDays<4);
-let alertHtml=sanctioned.length?`<div class="alert-auto"><div class="alert-title">⚠️ Sanciones esta semana</div>${sanctioned.map(m=>{const miss=4-m.weekDays;return`<div class="alert-item"><strong>${m.name}</strong><span>₡${(miss*1000).toLocaleString()} (${miss} día${miss>1?‘s’:’’})</span></div>`;}).join('')}</div>`:’’;
-const rankHtml=mpts.map((m,i)=>{const rc=i===0?‘gold’:i===1?‘silver’:i===2?‘bronze’:’’;const dots=days.map(d=>{const done=att.find(a=>a.member_id===m.id&&a.day_key===d.key);const past=new Date(d.date)<new Date(new Date().setHours(0,0,0,0));return done?‘🟢’:(past?‘🔴’:‘⚪’);}).join(’’);return`<div class="member-row"><div class="rank ${rc}">${i+1}</div><div class="avatar">${m.emoji}</div><div class="member-info"><div class="member-name">${m.name}</div><div class="member-stats">${dots} · ${m.weekDays}/4 días</div></div><div class="member-pts">${m.pts}<small>PTS</small></div></div>`;}).join(’’);
-c.innerHTML=`${alertHtml}<div class="card"><div class="card-title">🏆 Tabla de posiciones</div>${members.length?rankHtml:'<div class="empty-state"><div class="big">👥</div>Sin miembros</div>'}</div><div class="stat-grid" style="margin:0 16px 14px"><div class="stat-box"><div class="stat-val yellow">${members.length}</div><div class="stat-lbl">Miembros</div></div><div class="stat-box"><div class="stat-val green">${mpts.filter(m=>m.weekDays>=4).length}</div><div class="stat-lbl">Al día</div></div></div>`;
+function todayKey() {
+  var n = new Date();
+  return n.getFullYear() + '-' + String(n.getMonth()+1).padStart(2,'0') + '-' + String(n.getDate()).padStart(2,'0');
 }
 
-async function renderSemana(){
-renderGroupSelector(‘semana-groups’,‘semana’);
-const c=document.getElementById(‘semana-content’);
-if(!currentGroupId){c.innerHTML=’’;return;}
-showLoading(‘Cargando semana…’);
-const days=getWeekDays(),today=todayKey();
-const [mRes,aRes]=await Promise.all([sb.from(‘members’).select(’*’).eq(‘group_id’,currentGroupId).order(‘created_at’),sb.from(‘attendance’).select(’*’).eq(‘group_id’,currentGroupId).in(‘day_key’,days.map(d=>d.key))]);
-hideLoading();
-const members=mRes.data||[],att=aRes.data||[];
-const wh=days.map(d=>`<div class="week-day-label">${d.label}</div>`).join(’’);
-c.innerHTML=members.map(m=>{
-const cells=days.map(d=>{const done=att.find(a=>a.member_id===m.id&&a.day_key===d.key);const isToday=d.key===today;const isPast=new Date(d.date)<new Date(new Date().setHours(0,0,0,0));const cls=done?‘done’:(!isPast&&!isToday?‘future’:’’);return`<div class="day-cell ${cls} ${isToday?'today':''}" onclick="toggleDay('${d.key}','${m.id}','${m.name}')">${done?'✅':(isPast||isToday?'○':'')}</div>`;}).join(’’);
-const wk=att.filter(a=>a.member_id===m.id).length,miss=Math.max(0,4-wk);
-return`<div class="card" style="margin-bottom:10px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div class="avatar" style="width:36px;height:36px;font-size:18px">${m.emoji}</div><div><div style="font-weight:800;font-size:15px">${m.name}</div><div style="font-size:11px;color:${wk>=4?'var(--accent3)':'var(--accent2)'}">${wk}/4 días ${wk>=4?'✓ Sin sanción':'· ₡'+(miss*1000).toLocaleString()+' en riesgo'}</div></div></div><div class="week-header">${wh}</div><div class="week-grid">${cells}</div></div>`;
-}).join(’’)||’<div class="empty-state"><div class="big">📅</div>Sin miembros</div>’;
+async function initDB() {
+  showLoading('Conectando...');
+  try {
+    var res = await sb.from('groups').select('*').order('created_at');
+    if (res.error) throw res.error;
+    groups = res.data || [];
+    if (groups.length && !currentGroupId) currentGroupId = groups[0].id;
+  } catch(e) {
+    showToast('Error: ' + e.message, 'error');
+  }
+  hideLoading();
+  renderRanking();
 }
 
-async function toggleDay(dayKey,memberId,memberName){
-const days=getWeekDays(),today=todayKey(),d=days.find(d=>d.key===dayKey);
-if(!d)return;
-const isPast=new Date(d.date)<new Date(new Date().setHours(0,0,0,0)),isToday=dayKey===today;
-if(!isPast&&!isToday)return;
-const {data:ex}=await sb.from(‘attendance’).select(‘id’).eq(‘group_id’,currentGroupId).eq(‘member_id’,memberId).eq(‘day_key’,dayKey).single();
-if(ex){await sb.from(‘attendance’).delete().eq(‘id’,ex.id);showToast(`${memberName} — falta removida`,‘error’);}
-else{await sb.from(‘attendance’).insert({group_id:currentGroupId,member_id:memberId,day_key:dayKey});showToast(`${memberName} — ✅ entreno registrado`);}
-await renderSemana();
+function showPage(name, btn) {
+  document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.nav-btn').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById('page-' + name).classList.add('active');
+  btn.classList.add('active');
+  if (name === 'ranking') renderRanking();
+  else if (name === 'semana') renderSemana();
+  else if (name === 'retos') renderRetos();
+  else if (name === 'caja') renderCaja();
+  else if (name === 'admin') renderAdmin();
 }
 
-async function renderRetos(){
-renderGroupSelector(‘retos-groups’,‘retos’);
-const c=document.getElementById(‘retos-content’);
-if(!currentGroupId){c.innerHTML=’’;return;}
-showLoading(‘Cargando retos…’);
-const [rRes,mRes,crRes]=await Promise.all([sb.from(‘retos’).select(’*’).eq(‘group_id’,currentGroupId).eq(‘active’,true).maybeSingle(),sb.from(‘members’).select(’*’).eq(‘group_id’,currentGroupId).order(‘created_at’),sb.from(‘cal_retos’).select(’*,cal_entries(*)’).eq(‘group_id’,currentGroupId).eq(‘active’,true).maybeSingle()]);
-hideLoading();
-const reto=rRes.data,members=mRes.data||[];
-let ram={};
-if(reto){const {data:ra}=await sb.from(‘reto_attendance’).select(‘member_id’).eq(‘reto_id’,reto.id);(ra||[]).forEach(r=>ram[r.member_id]=true);}
-let retoHtml=reto?`<div class="reto-card"><div class="reto-badge">🔥 Reto activo</div><div class="reto-title">${reto.description}</div><div class="reto-pts">⭐ +${reto.points} puntos extra</div></div><div class="card"><div class="card-title">✅ ¿Quién lo completó?</div>${members.map(m=>`<div class="member-row"><div class="avatar">${m.emoji}</div><div class="member-info"><div class="member-name">${m.name}</div></div><button class="paid-btn ${ram[m.id]?'is-paid':''}" onclick="toggleRetoAtt('${reto.id}','${m.id}','${m.name}')">${ram[m.id]?‘✓ Hecho’:‘Marcar’}</button></div>`).join('')}</div><div style="padding:0 16px"><button class="btn-secondary" onclick="clearReto('${reto.id}')">🗑 Eliminar reto</button></div>`:`<div class="card" style="text-align:center;padding:32px"><div style="font-size:48px;margin-bottom:12px">🎯</div><div style="font-weight:800;font-size:16px;margin-bottom:6px">Sin reto activo</div></div>`;
-const cr=crRes.data;
-let calHtml=’’;
-if(cr){const entries=cr.cal_entries||[];const tA=entries.filter(e=>e.team===‘A’).reduce((s,e)=>s+e.calories,0);const tB=entries.filter(e=>e.team===‘B’).reduce((s,e)=>s+e.calories,0);const tot=tA+tB||1;const pA=Math.round((tA/tot)*100);calHtml=`<div class="card"><div class="card-title">🔥 Reto Calorías</div><div class="teams-vs"><div class="team-box"><div class="team-name">${cr.team_a}</div><div class="team-cals ${tA>=tB?'':'losing'}">${tA.toLocaleString()}</div></div><div class="vs-text">VS</div><div class="team-box"><div class="team-name">${cr.team_b}</div><div class="team-cals ${tB>tA?'':'losing'}">${tB.toLocaleString()}</div></div></div><div class="progress-bar"><div class="progress-fill" style="width:${pA}%"></div></div><div style="display:flex;gap:8px;margin-top:14px"><button class="btn-secondary" style="flex:1" onclick="openCalEntry('${cr.id}','${cr.team_a}','${cr.team_b}')">+ Agregar kcal</button><button class="btn-secondary" style="flex:1;color:var(--accent2)" onclick="clearCalReto('${cr.id}')">Finalizar</button></div></div>`;}
-else{calHtml=`<div style="padding:0 16px 14px"><button class="btn-secondary" onclick="openModal('modal-calorias')">🔥 Crear reto calorías</button></div>`;}
-c.innerHTML=retoHtml+calHtml+`<div style="padding:0 16px"><button class="btn-primary" style="margin-top:4px" onclick="openModal('modal-reto')">+ ACTIVAR RETO EXTRA</button></div>`;
+function renderGroupSelector(cid, pk) {
+  var c = document.getElementById(cid);
+  if (!groups.length) { c.innerHTML = '<div style="padding:12px 20px;font-size:13px;color:var(--muted)">Crea un grupo en Admin</div>'; return; }
+  c.innerHTML = groups.map(function(g) {
+    return '<div class="group-chip ' + (currentGroupId === g.id ? 'active' : '') + '" onclick="selGroup(\'' + g.id + '\',\'' + pk + '\')">' + g.name + '</div>';
+  }).join('');
 }
 
-async function toggleRetoAtt(rid,mid,name){
-const {data:ex}=await sb.from(‘reto_attendance’).select(‘id’).eq(‘reto_id’,rid).eq(‘member_id’,mid).maybeSingle();
-if(ex){await sb.from(‘reto_attendance’).delete().eq(‘id’,ex.id);showToast(`${name} — removido`,‘error’);}
-else{await sb.from(‘reto_attendance’).insert({reto_id:rid,member_id:mid,group_id:currentGroupId});showToast(`${name} — ✅ completado`);}
-renderRetos();
-}
-async function clearReto(id){if(!confirm(’¿Eliminar el reto activo?’))return;await sb.from(‘retos’).update({active:false}).eq(‘id’,id);showToast(‘Reto eliminado’);renderRetos();}
-async function clearCalReto(id){if(!confirm(’¿Finalizar?’))return;await sb.from(‘cal_retos’).update({active:false}).eq(‘id’,id);showToast(‘Reto finalizado’);renderRetos();}
-function openCalEntry(id,a,b){const s=document.getElementById(‘cal-entry-team’);s.innerHTML=`<option value="A">${a}</option><option value="B">${b}</option>`;s.dataset.calRetoId=id;openModal(‘modal-cal-entry’);}
-async function addCalEntry(){
-const team=document.getElementById(‘cal-entry-team’).value,id=document.getElementById(‘cal-entry-team’).dataset.calRetoId,cals=parseInt(document.getElementById(‘cal-entry-value’).value)||0,member=document.getElementById(‘cal-entry-member’).value.trim();
-if(!cals||!member){showToast(‘Completa todos los campos’,‘error’);return;}
-await sb.from(‘cal_entries’).insert({cal_reto_id:id,team,calories:cals,member_name:member,group_id:currentGroupId});
-document.getElementById(‘cal-entry-value’).value=’’;document.getElementById(‘cal-entry-member’).value=’’;
-closeModal(‘modal-cal-entry’);showToast(`✅ ${cals} kcal agregadas`);renderRetos();
+async function selGroup(gid, pk) {
+  currentGroupId = gid;
+  if (pk === 'ranking') renderRanking();
+  else if (pk === 'semana') renderSemana();
+  else if (pk === 'retos') renderRetos();
+  else if (pk === 'caja') renderCaja();
 }
 
-async function renderCaja(){
-renderGroupSelector(‘caja-groups’,‘caja’);
-const c=document.getElementById(‘caja-content’);
-if(!currentGroupId){c.innerHTML=’’;return;}
-showLoading(‘Cargando caja…’);
-const month=`${new Date().getFullYear()}-${String(new Date().getMonth()+1).padStart(2,'0')}`;
-const [mRes,pRes,aRes]=await Promise.all([sb.from(‘members’).select(’*’).eq(‘group_id’,currentGroupId).order(‘created_at’),sb.from(‘payments’).select(’*’).eq(‘group_id’,currentGroupId).eq(‘month’,month),sb.from(‘attendance’).select(’*’).eq(‘group_id’,currentGroupId)]);
-hideLoading();
-const members=mRes.data||[],payments=pRes.data||[],allAtt=aRes.data||[];
-const monthLabel=new Date().toLocaleString(‘es’,{month:‘long’,year:‘numeric’});
-const paidMap={},spMap={};
-payments.forEach(p=>{if(p.type===‘monthly’)paidMap[p.member_id]=p.paid;if(p.type===‘sanction’)spMap[p.member_id]=p.paid;});
-const wkG={};
-allAtt.forEach(a=>{const pts=a.day_key.split(’-’);const d=new Date(parseInt(pts[0]),parseInt(pts[1])-1,parseInt(pts[2]));const dn=d.getDay()||7;const mon=new Date(d);mon.setDate(d.getDate()-dn+1);const wk=mon.toISOString().split(‘T’)[0];if(!wkG[wk])wkG[wk]={};if(!wkG[wk][a.member_id])wkG[wk][a.member_id]=0;wkG[wk][a.member_id]++;});
-const sanctions=members.map(m=>{let td=0;Object.values(wkG).forEach(w=>{const went=w[m.id]||0;if(went<4)td+=(4-went);});return td>0?{memberId:m.id,name:m.name,days:td,amount:td*1000}:null;}).filter(Boolean);
-const mPaid=members.filter(m=>paidMap[m.id]).length*5000;
-const sPaid=sanctions.filter(s=>spMap[s.memberId]).reduce((t,s)=>t+s.amount,0);
-const total=mPaid+sPaid;
-const mHtml=members.map(m=>`<div class="payment-row"><div class="avatar" style="width:36px;height:36px;font-size:16px;margin-right:4px">${m.emoji}</div><div class="payment-info"><div class="payment-name">${m.name}</div><div class="payment-detail">Cuota ${monthLabel}</div></div><div class="payment-amount ${paidMap[m.id]?'positive':'negative'}">₡5.000</div><button class="toggle-paid ${paidMap[m.id]?'paid':''}" onclick="togglePayment('${m.id}','monthly','${month}')">${paidMap[m.id]?'✓':''}</button></div>`).join(’’);
-const sHtml=sanctions.length?sanctions.map(s=>`<div class="payment-row"><div class="avatar" style="width:36px;height:36px;font-size:16px;margin-right:4px">⚠️</div><div class="payment-info"><div class="payment-name">${s.name}</div><div class="payment-detail">${s.days} día${s.days>1?'s':''} · ₡1.000/día</div></div><div class="payment-amount negative">₡${s.amount.toLocaleString()}</div><button class="toggle-paid ${spMap[s.memberId]?'paid':''}" onclick="togglePayment('${s.memberId}','sanction','${month}')">${spMap[s.memberId]?'✓':''}</button></div>`).join(’’):’<div style="text-align:center;color:var(--accent3);font-weight:800;padding:16px">✓ Sin sanciones</div>’;
-c.innerHTML=`<div class="caja-total"><div class="caja-label">💰 Total recaudado</div><div class="caja-amount">₡${total.toLocaleString()}</div><div class="caja-sub">Cuotas + sanciones cobradas</div></div><div class="stat-grid" style="margin:0 16px 14px"><div class="stat-box"><div class="stat-val green">₡${mPaid.toLocaleString()}</div><div class="stat-lbl">Cuotas</div></div><div class="stat-box"><div class="stat-val red">₡${sPaid.toLocaleString()}</div><div class="stat-lbl">Sanciones</div></div></div><div class="card"><div class="card-title">📅 Cuota mensual — ${monthLabel}</div>${mHtml||'<div class="empty-state">Sin miembros</div>'}</div><div class="card"><div class="card-title">⚠️ Sanciones</div>${sHtml}</div>`;
+async function renderRanking() {
+  renderGroupSelector('ranking-groups', 'ranking');
+  var c = document.getElementById('ranking-content');
+  if (!currentGroupId) { c.innerHTML = '<div class="empty-state"><div class="big">👥</div>Sin grupo seleccionado</div>'; return; }
+  showLoading('Cargando...');
+  var days = getWeekDays();
+  var keys = days.map(function(d){ return d.key; });
+  var r1 = await sb.from('members').select('*').eq('group_id', currentGroupId).order('created_at');
+  var r2 = await sb.from('attendance').select('*').eq('group_id', currentGroupId).in('day_key', keys);
+  var r3 = await sb.from('attendance').select('*').eq('group_id', currentGroupId);
+  var r4 = await sb.from('reto_attendance').select('*').eq('group_id', currentGroupId);
+  hideLoading();
+  var members = r1.data || [];
+  var weekAtt = r2.data || [];
+  var allAtt = r3.data || [];
+  var retoAtt = r4.data || [];
+  var mpts = members.map(function(m) {
+    var pts = allAtt.filter(function(a){ return a.member_id === m.id; }).length * 3 +
+              retoAtt.filter(function(a){ return a.member_id === m.id; }).length * 3;
+    var wd = weekAtt.filter(function(a){ return a.member_id === m.id; }).length;
+    return Object.assign({}, m, { pts: pts, weekDays: wd });
+  }).sort(function(a,b){ return b.pts - a.pts; });
+
+  var sanctioned = mpts.filter(function(m){ return m.weekDays < 4; });
+  var alertHtml = '';
+  if (sanctioned.length) {
+    alertHtml = '<div class="alert-auto"><div class="alert-title">⚠️ Sanciones esta semana</div>' +
+      sanctioned.map(function(m) {
+        var miss = 4 - m.weekDays;
+        return '<div class="alert-item"><strong>' + m.name + '</strong><span>₡' + (miss*1000).toLocaleString() + '</span></div>';
+      }).join('') + '</div>';
+  }
+  var rankHtml = mpts.map(function(m, i) {
+    var rc = i===0?'gold':i===1?'silver':i===2?'bronze':'';
+    var dots = days.map(function(d) {
+      var done = weekAtt.find(function(a){ return a.member_id===m.id && a.day_key===d.key; });
+      var past = new Date(d.date) < new Date(new Date().setHours(0,0,0,0));
+      return done ? '🟢' : (past ? '🔴' : '⚪');
+    }).join('');
+    return '<div class="member-row"><div class="rank ' + rc + '">' + (i+1) + '</div>' +
+      '<div class="avatar">' + m.emoji + '</div>' +
+      '<div class="member-info"><div class="member-name">' + m.name + '</div><div class="member-stats">' + dots + ' · ' + m.weekDays + '/4</div></div>' +
+      '<div class="member-pts">' + m.pts + '<small>PTS</small></div></div>';
+  }).join('');
+  c.innerHTML = alertHtml +
+    '<div class="card"><div class="card-title">🏆 Tabla de posiciones</div>' + (members.length ? rankHtml : '<div class="empty-state"><div class="big">👥</div>Sin miembros</div>') + '</div>' +
+    '<div class="stat-grid" style="margin:0 16px 14px">' +
+    '<div class="stat-box"><div class="stat-val yellow">' + members.length + '</div><div class="stat-lbl">Miembros</div></div>' +
+    '<div class="stat-box"><div class="stat-val green">' + mpts.filter(function(m){ return m.weekDays>=4; }).length + '</div><div class="stat-lbl">Al dia</div></div></div>';
 }
 
-async function togglePayment(mid,type,month){
-const {data:ex}=await sb.from(‘payments’).select(‘id,paid’).eq(‘group_id’,currentGroupId).eq(‘member_id’,mid).eq(‘type’,type).eq(‘month’,month).maybeSingle();
-if(ex){await sb.from(‘payments’).update({paid:!ex.paid}).eq(‘id’,ex.id);}
-else{await sb.from(‘payments’).insert({group_id:currentGroupId,member_id:mid,type,month,paid:true});}
-showToast(‘Pago actualizado ✓’);renderCaja();
+async function renderSemana() {
+  renderGroupSelector('semana-groups', 'semana');
+  var c = document.getElementById('semana-content');
+  if (!currentGroupId) { c.innerHTML = ''; return; }
+  showLoading('Cargando...');
+  var days = getWeekDays();
+  var today = todayKey();
+  var r1 = await sb.from('members').select('*').eq('group_id', currentGroupId).order('created_at');
+  var r2 = await sb.from('attendance').select('*').eq('group_id', currentGroupId).in('day_key', days.map(function(d){ return d.key; }));
+  hideLoading();
+  var members = r1.data || [];
+  var att = r2.data || [];
+  var wh = days.map(function(d){ return '<div class="week-day-label">' + d.label + '</div>'; }).join('');
+  c.innerHTML = members.map(function(m) {
+    var cells = days.map(function(d) {
+      var done = att.find(function(a){ return a.member_id===m.id && a.day_key===d.key; });
+      var isToday = d.key === today;
+      var isPast = new Date(d.date) < new Date(new Date().setHours(0,0,0,0));
+      var cls = done ? 'done' : (!isPast && !isToday ? 'future' : '');
+      return '<div class="day-cell ' + cls + ' ' + (isToday?'today':'') + '" onclick="toggleDay(\'' + d.key + '\',\'' + m.id + '\',\'' + m.name + '\')">' + (done ? '✅' : (isPast||isToday ? '○' : '')) + '</div>';
+    }).join('');
+    var wk = att.filter(function(a){ return a.member_id===m.id; }).length;
+    var miss = Math.max(0, 4-wk);
+    return '<div class="card" style="margin-bottom:10px">' +
+      '<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">' +
+      '<div class="avatar" style="width:36px;height:36px;font-size:18px">' + m.emoji + '</div>' +
+      '<div><div style="font-weight:800;font-size:15px">' + m.name + '</div>' +
+      '<div style="font-size:11px;color:' + (wk>=4?'var(--accent3)':'var(--accent2)') + '">' + wk + '/4 dias ' + (wk>=4?'Sin sancion':'₡'+(miss*1000).toLocaleString()+' en riesgo') + '</div></div></div>' +
+      '<div class="week-header">' + wh + '</div><div class="week-grid">' + cells + '</div></div>';
+  }).join('') || '<div class="empty-state"><div class="big">📅</div>Sin miembros</div>';
 }
 
-async function renderAdmin(){
-const c=document.getElementById(‘admin-content’);
-if(!groups.length){c.innerHTML=`<div class="empty-state" style="padding-top:60px"><div class="big">🏋️</div><div style="font-weight:800;font-size:18px;margin-bottom:8px">Bienvenido a GymReto</div><div style="font-size:13px;color:var(--muted);margin-bottom:24px">Crea tu primer grupo para empezar</div><button class="btn-primary" style="max-width:280px;margin:0 auto" onclick="openModal('modal-group')">+ CREAR GRUPO</button></div>`;return;}
-const gHtml=await Promise.all(groups.map(async g=>{const {data:members}=await sb.from(‘members’).select(’*’).eq(‘group_id’,g.id).order(‘created_at’);return`<div class="card" style="margin-bottom:10px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px"><div><div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px">${g.name}</div><div style="font-size:12px;color:var(--muted)">Admin: ${g.admin_name} · ${(members||[]).length} miembros</div></div><button onclick="deleteGroup('${g.id}')" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--muted)">🗑</button></div><div style="display:flex;gap:8px"><button class="btn-secondary" style="flex:1" onclick="currentGroupId='${g.id}';openModal('modal-member')">+ Miembro</button><button class="btn-secondary" style="flex:1" onclick="toggleML('${g.id}')">Ver miembros</button></div><div id="ml-${g.id}" style="display:none;margin-top:12px">${(members||[]).map(m=>`<div class="member-row"><div class="avatar" style="width:36px;height:36px;font-size:16px">${m.emoji}</div><div class="member-info"><div class="member-name">${m.name}</div></div><button onclick="deleteMember('${m.id}')" style="background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer">✕</button></div>`).join('')||'<div style="color:var(--muted);font-size:13px;padding:8px 0">Sin miembros aún</div>'}</div></div>`;}));
-c.innerHTML=gHtml.join(’’)+`<div style="padding:0 16px"><button class="btn-primary" onclick="openModal('modal-group')">+ CREAR NUEVO GRUPO</button></div>`;
-}
-function toggleML(gid){const el=document.getElementById(`ml-${gid}`);el.style.display=el.style.display===‘none’?‘block’:‘none’;}
-
-async function createGroup(){
-const name=document.getElementById(‘new-group-name’).value.trim();
-const admin=document.getElementById(‘new-group-admin’).value.trim();
-if(!name||!admin){showToast(‘Completa todos los campos’,‘error’);return;}
-showLoading(‘Creando grupo…’);
-try{
-const {data,error}=await sb.from(‘groups’).insert({name,admin_name:admin}).select();
-if(error)throw error;
-document.getElementById(‘new-group-name’).value=’’;
-document.getElementById(‘new-group-admin’).value=’’;
-closeModal(‘modal-group’);
-await loadGroups();
-hideLoading();
-showToast(`Grupo ${name} creado ✓`);
-renderAdmin();
-}catch(e){hideLoading();showToast(e.message,‘error’);}
+async function toggleDay(dayKey, memberId, memberName) {
+  var days = getWeekDays();
+  var today = todayKey();
+  var d = days.find(function(x){ return x.key===dayKey; });
+  if (!d) return;
+  var isPast = new Date(d.date) < new Date(new Date().setHours(0,0,0,0));
+  var isToday = dayKey === today;
+  if (!isPast && !isToday) return;
+  var ex = await sb.from('attendance').select('id').eq('group_id',currentGroupId).eq('member_id',memberId).eq('day_key',dayKey).maybeSingle();
+  if (ex.data) {
+    await sb.from('attendance').delete().eq('id', ex.data.id);
+    showToast(memberName + ' - falta removida', 'error');
+  } else {
+    await sb.from('attendance').insert({group_id:currentGroupId, member_id:memberId, day_key:dayKey});
+    showToast(memberName + ' - entreno registrado');
+  }
+  renderSemana();
 }
 
-async function addMember(){
-const name=document.getElementById(‘new-member-name’).value.trim();
-const emoji=document.getElementById(‘new-member-emoji’).value.trim()||EMOJIS[Math.floor(Math.random()*EMOJIS.length)];
-if(!name){showToast(‘Escribe el nombre’,‘error’);return;}
-if(!currentGroupId){showToast(‘Selecciona un grupo’,‘error’);return;}
-showLoading(‘Añadiendo…’);
-try{
-const {error}=await sb.from(‘members’).insert({group_id:currentGroupId,name,emoji});
-if(error)throw error;
-document.getElementById(‘new-member-name’).value=’’;
-document.getElementById(‘new-member-emoji’).value=’’;
-closeModal(‘modal-member’);
-hideLoading();
-showToast(`${name} añadido ✓`);
-renderAdmin();
-}catch(e){hideLoading();showToast(e.message,‘error’);}
+async function renderRetos() {
+  renderGroupSelector('retos-groups', 'retos');
+  var c = document.getElementById('retos-content');
+  if (!currentGroupId) { c.innerHTML = ''; return; }
+  showLoading('Cargando...');
+  var r1 = await sb.from('retos').select('*').eq('group_id',currentGroupId).eq('active',true).maybeSingle();
+  var r2 = await sb.from('members').select('*').eq('group_id',currentGroupId).order('created_at');
+  var r3 = await sb.from('cal_retos').select('*,cal_entries(*)').eq('group_id',currentGroupId).eq('active',true).maybeSingle();
+  hideLoading();
+  var reto = r1.data, members = r2.data || [], cr = r3.data;
+  var ram = {};
+  if (reto) {
+    var ra = await sb.from('reto_attendance').select('member_id').eq('reto_id', reto.id);
+    (ra.data || []).forEach(function(r){ ram[r.member_id] = true; });
+  }
+  var retoHtml = reto ?
+    '<div class="reto-card"><div class="reto-badge">🔥 Reto activo</div><div class="reto-title">' + reto.description + '</div><div class="reto-pts">⭐ +' + reto.points + ' puntos</div></div>' +
+    '<div class="card"><div class="card-title">Quien lo completo?</div>' +
+    members.map(function(m){ return '<div class="member-row"><div class="avatar">' + m.emoji + '</div><div class="member-info"><div class="member-name">' + m.name + '</div></div><button class="paid-btn ' + (ram[m.id]?'is-paid':'') + '" onclick="toggleRA(\'' + reto.id + '\',\'' + m.id + '\',\'' + m.name + '\')">' + (ram[m.id]?'Hecho':'Marcar') + '</button></div>'; }).join('') +
+    '</div><div style="padding:0 16px"><button class="btn-secondary" onclick="clearReto(\'' + reto.id + '\')">Eliminar reto</button></div>' :
+    '<div class="card" style="text-align:center;padding:32px"><div style="font-size:48px;margin-bottom:12px">🎯</div><div style="font-weight:800">Sin reto activo</div></div>';
+  var calHtml = '';
+  if (cr) {
+    var entries = cr.cal_entries || [];
+    var tA = entries.filter(function(e){ return e.team==='A'; }).reduce(function(s,e){ return s+e.calories; }, 0);
+    var tB = entries.filter(function(e){ return e.team==='B'; }).reduce(function(s,e){ return s+e.calories; }, 0);
+    var tot = tA+tB || 1;
+    var pA = Math.round((tA/tot)*100);
+    calHtml = '<div class="card"><div class="card-title">Reto Calorias</div>' +
+      '<div class="teams-vs"><div class="team-box"><div class="team-name">' + cr.team_a + '</div><div class="team-cals ' + (tA>=tB?'':'losing') + '">' + tA.toLocaleString() + '</div></div>' +
+      '<div class="vs-text">VS</div>' +
+      '<div class="team-box"><div class="team-name">' + cr.team_b + '</div><div class="team-cals ' + (tB>tA?'':'losing') + '">' + tB.toLocaleString() + '</div></div></div>' +
+      '<div class="progress-bar"><div class="progress-fill" style="width:' + pA + '%"></div></div>' +
+      '<div style="display:flex;gap:8px;margin-top:14px"><button class="btn-secondary" style="flex:1" onclick="openCE(\'' + cr.id + '\',\'' + cr.team_a + '\',\'' + cr.team_b + '\')">+ Calorias</button>' +
+      '<button class="btn-secondary" style="flex:1;color:var(--accent2)" onclick="clearCR(\'' + cr.id + '\')">Finalizar</button></div></div>';
+  } else {
+    calHtml = '<div style="padding:0 16px 14px"><button class="btn-secondary" onclick="openModal(\'modal-calorias\')">Crear reto calorias</button></div>';
+  }
+  c.innerHTML = retoHtml + calHtml + '<div style="padding:0 16px"><button class="btn-primary" style="margin-top:4px" onclick="openModal(\'modal-reto\')">+ ACTIVAR RETO EXTRA</button></div>';
 }
 
-async function deleteGroup(gid){
-if(!confirm(’¿Eliminar este grupo?’))return;
-showLoading(‘Eliminando…’);
-await sb.from(‘groups’).delete().eq(‘id’,gid);
-await loadGroups();
-if(currentGroupId===gid)currentGroupId=groups[0]?.id||null;
-hideLoading();showToast(‘Grupo eliminado’);renderAdmin();
+async function toggleRA(rid, mid, name) {
+  var ex = await sb.from('reto_attendance').select('id').eq('reto_id',rid).eq('member_id',mid).maybeSingle();
+  if (ex.data) { await sb.from('reto_attendance').delete().eq('id',ex.data.id); showToast(name+' removido','error'); }
+  else { await sb.from('reto_attendance').insert({reto_id:rid,member_id:mid,group_id:currentGroupId}); showToast(name+' completo'); }
+  renderRetos();
 }
-async function deleteMember(mid){if(!confirm(’¿Eliminar miembro?’))return;await sb.from(‘members’).delete().eq(‘id’,mid);showToast(‘Miembro eliminado’);renderAdmin();}
-
-async function addReto(){
-const desc=document.getElementById(‘new-reto-desc’).value.trim();
-const pts=parseInt(document.getElementById(‘new-reto-pts’).value)||3;
-if(!desc){showToast(‘Describe el reto’,‘error’);return;}
-await sb.from(‘retos’).update({active:false}).eq(‘group_id’,currentGroupId).eq(‘active’,true);
-await sb.from(‘retos’).insert({group_id:currentGroupId,description:desc,points:pts,active:true});
-document.getElementById(‘new-reto-desc’).value=’’;
-closeModal(‘modal-reto’);showToast(‘Reto activado ✓’);renderRetos();
-}
-
-async function createCalReto(){
-const a=document.getElementById(‘cal-team-a’).value.trim(),b=document.getElementById(‘cal-team-b’).value.trim();
-if(!a||!b){showToast(‘Escribe los nombres’,‘error’);return;}
-await sb.from(‘cal_retos’).update({active:false}).eq(‘group_id’,currentGroupId).eq(‘active’,true);
-await sb.from(‘cal_retos’).insert({group_id:currentGroupId,team_a:a,team_b:b,active:true});
-document.getElementById(‘cal-team-a’).value=’’;document.getElementById(‘cal-team-b’).value=’’;
-closeModal(‘modal-calorias’);showToast(‘Reto creado ✓’);renderRetos();
+async function clearReto(id) { if(!confirm('Eliminar reto?'))return; await sb.from('retos').update({active:false}).eq('id',id); showToast('Reto eliminado'); renderRetos(); }
+async function clearCR(id) { if(!confirm('Finalizar?'))return; await sb.from('cal_retos').update({active:false}).eq('id',id); showToast('Finalizado'); renderRetos(); }
+function openCE(id,a,b) { var s=document.getElementById('cal-entry-team'); s.innerHTML='<option value="A">'+a+'</option><option value="B">'+b+'</option>'; s.dataset.crid=id; openModal('modal-cal-entry'); }
+async function addCalEntry() {
+  var team=document.getElementById('cal-entry-team').value;
+  var crid=document.getElementById('cal-entry-team').dataset.crid;
+  var cals=parseInt(document.getElementById('cal-entry-value').value)||0;
+  var member=document.getElementById('cal-entry-member').value.trim();
+  if(!cals||!member){showToast('Completa los campos','error');return;}
+  await sb.from('cal_entries').insert({cal_reto_id:crid,team:team,calories:cals,member_name:member,group_id:currentGroupId});
+  document.getElementById('cal-entry-value').value='';
+  document.getElementById('cal-entry-member').value='';
+  closeModal('modal-cal-entry'); showToast(cals+' kcal agregadas'); renderRetos();
 }
 
-initDB().then(()=>renderRanking());
+async function renderCaja() {
+  renderGroupSelector('caja-groups','caja');
+  var c = document.getElementById('caja-content');
+  if (!currentGroupId) { c.innerHTML=''; return; }
+  showLoading('Cargando...');
+  var now = new Date();
+  var month = now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0');
+  var r1 = await sb.from('members').select('*').eq('group_id',currentGroupId).order('created_at');
+  var r2 = await sb.from('payments').select('*').eq('group_id',currentGroupId).eq('month',month);
+  var r3 = await sb.from('attendance').select('*').eq('group_id',currentGroupId);
+  hideLoading();
+  var members=r1.data||[], payments=r2.data||[], allAtt=r3.data||[];
+  var ml = now.toLocaleString('es',{month:'long',year:'numeric'});
+  var pm={}, sm={};
+  payments.forEach(function(p){ if(p.type==='monthly')pm[p.member_id]=p.paid; if(p.type==='sanction')sm[p.member_id]=p.paid; });
+  var wkG={};
+  allAtt.forEach(function(a){
+    var pts=a.day_key.split('-');
+    var d=new Date(parseInt(pts[0]),parseInt(pts[1])-1,parseInt(pts[2]));
+    var dn=d.getDay()||7; var mon=new Date(d); mon.setDate(d.getDate()-dn+1);
+    var wk=mon.toISOString().split('T')[0];
+    if(!wkG[wk])wkG[wk]={}; if(!wkG[wk][a.member_id])wkG[wk][a.member_id]=0; wkG[wk][a.member_id]++;
+  });
+  var sanctions=members.map(function(m){
+    var td=0; Object.values(wkG).forEach(function(w){ var went=w[m.id]||0; if(went<4)td+=(4-went); });
+    return td>0?{memberId:m.id,name:m.name,days:td,amount:td*1000}:null;
+  }).filter(Boolean);
+  var mPaid=members.filter(function(m){return pm[m.id];}).length*5000;
+  var sPaid=sanctions.filter(function(s){return sm[s.memberId];}).reduce(function(t,s){return t+s.amount;},0);
+  var total=mPaid+sPaid;
+  var mHtml=members.map(function(m){
+    return '<div class="payment-row"><div class="avatar" style="width:36px;height:36px;font-size:16px;margin-right:4px">'+m.emoji+'</div>'+
+      '<div class="payment-info"><div class="payment-name">'+m.name+'</div><div class="payment-detail">Cuota '+ml+'</div></div>'+
+      '<div class="payment-amount '+(pm[m.id]?'positive':'negative')+'">₡5.000</div>'+
+      '<button class="toggle-paid '+(pm[m.id]?'paid':'')+'" onclick="togglePay(\''+m.id+'\',\'monthly\',\''+month+'\')">'+(pm[m.id]?'✓':'')+'</button></div>';
+  }).join('');
+  var sHtml=sanctions.length?sanctions.map(function(s){
+    return '<div class="payment-row"><div class="avatar" style="width:36px;height:36px;font-size:16px;margin-right:4px">⚠️</div>'+
+      '<div class="payment-info"><div class="payment-name">'+s.name+'</div><div class="payment-detail">'+s.days+' dias · ₡1.000/dia</div></div>'+
+      '<div class="payment-amount negative">₡'+s.amount.toLocaleString()+'</div>'+
+      '<button class="toggle-paid '+(sm[s.memberId]?'paid':'')+'" onclick="togglePay(\''+s.memberId+'\',\'sanction\',\''+month+'\')">'+(sm[s.memberId]?'✓':'')+'</button></div>';
+  }).join(''):'<div style="text-align:center;color:var(--accent3);font-weight:800;padding:16px">Sin sanciones</div>';
+  c.innerHTML='<div class="caja-total"><div class="caja-label">Total recaudado</div><div class="caja-amount">₡'+total.toLocaleString()+'</div><div class="caja-sub">Cuotas + sanciones</div></div>'+
+    '<div class="stat-grid" style="margin:0 16px 14px"><div class="stat-box"><div class="stat-val green">₡'+mPaid.toLocaleString()+'</div><div class="stat-lbl">Cuotas</div></div>'+
+    '<div class="stat-box"><div class="stat-val red">₡'+sPaid.toLocaleString()+'</div><div class="stat-lbl">Sanciones</div></div></div>'+
+    '<div class="card"><div class="card-title">Cuota mensual - '+ml+'</div>'+(mHtml||'<div class="empty-state">Sin miembros</div>')+'</div>'+
+    '<div class="card"><div class="card-title">Sanciones</div>'+sHtml+'</div>';
+}
+
+async function togglePay(mid, type, month) {
+  var ex = await sb.from('payments').select('id,paid').eq('group_id',currentGroupId).eq('member_id',mid).eq('type',type).eq('month',month).maybeSingle();
+  if (ex.data) { await sb.from('payments').update({paid:!ex.data.paid}).eq('id',ex.data.id); }
+  else { await sb.from('payments').insert({group_id:currentGroupId,member_id:mid,type:type,month:month,paid:true}); }
+  showToast('Pago actualizado'); renderCaja();
+}
+
+async function renderAdmin() {
+  var c = document.getElementById('admin-content');
+  if (!groups.length) {
+    c.innerHTML='<div class="empty-state" style="padding-top:60px"><div class="big">🏋️</div>'+
+      '<div style="font-weight:800;font-size:18px;margin-bottom:8px">Bienvenido a GymReto</div>'+
+      '<div style="font-size:13px;color:var(--muted);margin-bottom:24px">Crea tu primer grupo</div>'+
+      '<button class="btn-primary" style="max-width:280px;margin:0 auto" onclick="openModal(\'modal-group\')">+ CREAR GRUPO</button></div>';
+    return;
+  }
+  var html = '';
+  for (var i=0; i<groups.length; i++) {
+    var g = groups[i];
+    var mr = await sb.from('members').select('*').eq('group_id',g.id).order('created_at');
+    var members = mr.data || [];
+    html += '<div class="card" style="margin-bottom:10px">'+
+      '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">'+
+      '<div><div style="font-family:\'Bebas Neue\',sans-serif;font-size:22px">'+g.name+'</div>'+
+      '<div style="font-size:12px;color:var(--muted)">Admin: '+g.admin_name+' · '+members.length+' miembros</div></div>'+
+      '<button onclick="delGroup(\''+g.id+'\')" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--muted)">🗑</button></div>'+
+      '<div style="display:flex;gap:8px">'+
+      '<button class="btn-secondary" style="flex:1;margin:0" onclick="currentGroupId=\''+g.id+'\';openModal(\'modal-member\')">+ Miembro</button>'+
+      '<button class="btn-secondary" style="flex:1;margin:0" onclick="toggleML(\'ml-'+g.id+'\')">Ver miembros</button></div>'+
+      '<div id="ml-'+g.id+'" style="display:none;margin-top:12px">'+
+      members.map(function(m){ return '<div class="member-row"><div class="avatar" style="width:36px;height:36px;font-size:16px">'+m.emoji+'</div><div class="member-info"><div class="member-name">'+m.name+'</div></div><button onclick="delMember(\''+m.id+'\')" style="background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer">✕</button></div>'; }).join('') +
+      (members.length?'':'<div style="color:var(--muted);font-size:13px;padding:8px 0">Sin miembros</div>')+
+      '</div></div>';
+  }
+  html += '<div style="padding:0 16px"><button class="btn-primary" onclick="openModal(\'modal-group\')">+ CREAR NUEVO GRUPO</button></div>';
+  c.innerHTML = html;
+}
+
+function toggleML(id) { var el=document.getElementById(id); el.style.display=el.style.display==='none'?'block':'none'; }
+
+async function createGroup() {
+  var name = document.getElementById('new-group-name').value.trim();
+  var admin = document.getElementById('new-group-admin').value.trim();
+  if (!name || !admin) { showToast('Completa todos los campos', 'error'); return; }
+  showLoading('Creando grupo...');
+  try {
+    var res = await sb.from('groups').insert({name:name, admin_name:admin});
+    if (res.error) throw res.error;
+    document.getElementById('new-group-name').value = '';
+    document.getElementById('new-group-admin').value = '';
+    closeModal('modal-group');
+    var r = await sb.from('groups').select('*').order('created_at');
+    groups = r.data || [];
+    if (!currentGroupId && groups.length) currentGroupId = groups[0].id;
+    hideLoading();
+    showToast('Grupo ' + name + ' creado');
+    renderAdmin();
+  } catch(e) {
+    hideLoading();
+    showToast('Error: ' + e.message, 'error');
+  }
+}
+
+async function addMember() {
+  var name = document.getElementById('new-member-name').value.trim();
+  var emoji = document.getElementById('new-member-emoji').value.trim() || EMOJIS[Math.floor(Math.random()*EMOJIS.length)];
+  if (!name) { showToast('Escribe el nombre', 'error'); return; }
+  if (!currentGroupId) { showToast('Selecciona un grupo', 'error'); return; }
+  showLoading('Añadiendo...');
+  try {
+    var res = await sb.from('members').insert({group_id:currentGroupId, name:name, emoji:emoji});
+    if (res.error) throw res.error;
+    document.getElementById('new-member-name').value = '';
+    document.getElementById('new-member-emoji').value = '';
+    closeModal('modal-member');
+    hideLoading();
+    showToast(name + ' añadido');
+    renderAdmin();
+  } catch(e) {
+    hideLoading();
+    showToast('Error: ' + e.message, 'error');
+  }
+}
+
+async function delGroup(gid) {
+  if (!confirm('Eliminar grupo?')) return;
+  showLoading('Eliminando...');
+  await sb.from('groups').delete().eq('id', gid);
+  var r = await sb.from('groups').select('*').order('created_at');
+  groups = r.data || [];
+  if (currentGroupId === gid) currentGroupId = groups.length ? groups[0].id : null;
+  hideLoading(); showToast('Grupo eliminado'); renderAdmin();
+}
+async function delMember(mid) {
+  if (!confirm('Eliminar miembro?')) return;
+  await sb.from('members').delete().eq('id', mid);
+  showToast('Miembro eliminado'); renderAdmin();
+}
+
+async function addReto() {
+  var desc = document.getElementById('new-reto-desc').value.trim();
+  var pts = parseInt(document.getElementById('new-reto-pts').value) || 3;
+  if (!desc) { showToast('Describe el reto', 'error'); return; }
+  await sb.from('retos').update({active:false}).eq('group_id',currentGroupId).eq('active',true);
+  await sb.from('retos').insert({group_id:currentGroupId, description:desc, points:pts, active:true});
+  document.getElementById('new-reto-desc').value = '';
+  closeModal('modal-reto'); showToast('Reto activado'); renderRetos();
+}
+
+async function createCalReto() {
+  var a = document.getElementById('cal-team-a').value.trim();
+  var b = document.getElementById('cal-team-b').value.trim();
+  if (!a||!b) { showToast('Escribe los nombres', 'error'); return; }
+  await sb.from('cal_retos').update({active:false}).eq('group_id',currentGroupId).eq('active',true);
+  await sb.from('cal_retos').insert({group_id:currentGroupId, team_a:a, team_b:b, active:true});
+  document.getElementById('cal-team-a').value='';
+  document.getElementById('cal-team-b').value='';
+  closeModal('modal-calorias'); showToast('Reto creado'); renderRetos();
+}
+
+initDB();
 </script>
 
 </body>

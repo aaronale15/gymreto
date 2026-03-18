@@ -724,7 +724,7 @@ async function createGroup(){
   if(!name||!admin){ showToast('Completa todos los campos','error'); return; }
   showLoading('Creando grupo...');
   const {error} = await sb.from('groups').insert({name,admin_name:admin});
-  if(error){ hideLoading(); showToast('Error al crear grupo','error'); return; }
+  if(error){ hideLoading(); showToast(error.message,'error'); return; }
   document.getElementById('new-group-name').value='';
   document.getElementById('new-group-admin').value='';
   closeModal('modal-group');
@@ -741,7 +741,7 @@ async function addMember(){
   if(!currentGroupId){ showToast('Selecciona un grupo','error'); return; }
   showLoading('Añadiendo miembro...');
   const {error} = await sb.from('members').insert({group_id:currentGroupId,name,emoji});
-  if(error){ hideLoading(); showToast('Error al añadir miembro','error'); return; }
+  if(error){ hideLoading(); showToast(error.message,'error'); return; }
   document.getElementById('new-member-name').value='';
   document.getElementById('new-member-emoji').value='';
   closeModal('modal-member');
